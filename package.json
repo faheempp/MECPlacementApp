@@ -1,4 +1,5 @@
 {
+  "homepage": "https://faheempp.github.io/MECPlacementApp/",
   "name": "react-tutorial",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,6 +44,7 @@
   },
   "devDependencies": {
     "@types/bootstrap": "^5.1.12",
-    "@types/react-bootstrap": "^0.32.30"
+    "@types/react-bootstrap": "^0.32.30",
+    "gh-pages": "^4.0.0"
   }
 }
