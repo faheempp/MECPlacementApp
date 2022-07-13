@@ -1,0 +1,69 @@
+.header {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px .5px 5px 0px black;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    display: inline-block;
+    width: 80%;
+    margin: 0;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+}
+
+.logo {
+    display: inline-block;
+    float: left;
+    padding: 0 0 0 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.pctitle {
+    background: ;
+    width: ;
+    height: 40px;
+    font-weight: bold;
+    color: rgb(31, 30, 30);
+    padding: 14px 0 0px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.searchbar {
+    background: red;
+    width: 20%;
+    height: 40px;
+    padding: 14px 0 0px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+nav {
+    display: inline-block;
+    width: 40%;
+    float: right;
+    height: 54px;
+}
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+    float: right;
+    height: 36px;
+    font-size: .95em;
+    padding: 15px 5px 0 5px;
+    margin: 0 0% 0 0%;
+    background-color: ;
+}
+
+.nav-item:hover {
+    border-bottom: blue 3px solid;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+}
