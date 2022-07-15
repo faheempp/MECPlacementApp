@@ -1,15 +1,23 @@
-import logo from './logo.svg';
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
+
 import './App.css';
-import Navbar from './components/Navbar';
-import MainContainer from './components/mainContainer';
-import DriveInfo from './components/driveInfo';
+import DriveInfo from './components/DriveInfo/DriveInfo';
+import Profile from './pages/Profile';
+import Home from './pages/Home';
+import Application from './pages/Application';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <MainContainer></MainContainer>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {/* <Home/> */}
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/application' element={<Application/>} />
+          <Route path='/profile' element={<Profile />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

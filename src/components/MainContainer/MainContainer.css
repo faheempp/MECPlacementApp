@@ -1,0 +1,48 @@
+.main-container {
+    text-align: center;
+    margin: 13% 5% 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.upcomingdrives{
+    flex: 0.7;
+}
+
+.main-container .upcomingdrivesheading {
+    text-align: left;
+    font-size: 1.3em;
+    display: block;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-bottom: 2px rgb(224, 59, 59) solid;
+    float: none;
+}
+
+.driveinfocontainer {
+    padding: 1% 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+}
+
+.news-container{
+    flex: 0.2;
+    background-color: aqua;
+
+}
+
+.news-section-heading{
+    text-align: left;
+        font-size: 1.3em;
+        display: block;
+        font-family: 'Poppins';
+        font-weight: 500;
+        border-bottom: 2px rgb(224, 59, 59) solid;
+        float: none;
+}

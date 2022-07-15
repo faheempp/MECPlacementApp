@@ -1,11 +1,11 @@
 import React from "react";
-import './components.css';
+import './DriveInfo.css';
 
 function DriveInfo(){
     return(
     <div className="driveinfo">
-        <h3>Company Four</h3>
-        <div></div>
+        <h3>Company Name</h3>
+        <h2>Post: </h2>
       </div>
     )
 }
