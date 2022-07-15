@@ -10,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* <Home/> */}
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/application' element={<Application/>} />

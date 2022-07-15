@@ -1,5 +1,4 @@
 .driveinfo {
-    float: left;
     width: 300px;
     height: 200px;
     background-color: #ffffffb5;
@@ -9,6 +8,7 @@
     box-shadow: 0px 2px 2px black;
     padding: 0% 1.5% 1% 1.5%;
     font-family: 'Poppins';
+    text-align: left;
 }
 
 .driveinfo h3 {
