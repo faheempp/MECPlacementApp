@@ -4,7 +4,8 @@ import './Header.css';
 import { Link } from 'react-router-dom'
 import  collegelogo from'../../images/collegelogo.png';
 
-function Header(){
+
+function Header({active}){
     return(
         <div className="header">
             <div className="logotitlecontainer">
