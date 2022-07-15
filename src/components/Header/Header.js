@@ -7,7 +7,7 @@ import  collegelogo from'../../images/collegelogo.png';
 function Header(){
     return(
         <div className="header">
-            <div>
+            <div className="logotitlecontainer">
                 <div className="logo">
                     <img src={collegelogo} alt=""></img>
                 </div>
