@@ -1,16 +1,10 @@
 .header {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px .5px 5px 0px black;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    right: 5%;
+    background-color:#fafafa;
+    top: 2%; 
     display: flex;
-    justify-content: space-between;
-    width: 88%;
-    margin: 0;
-    border-radius: 5px;
-    padding: 2px 16px 2px 16px;
+    justify-content: space-between; 
+    padding:1rem 2rem 1rem 2rem;
+    border-bottom: 1.5px solid #c7c7c7;
     
 }
 
@@ -23,9 +17,11 @@
 .logo img {
     height: 50px;
 }
-
+.logotitlecontainer{
+    display: flex;
+}
 .pctitle {
-    height: 40px;
+    font-size: 1rem;
     font-weight: 500;
     font-family: 'Poppins';
     color: rgb(31, 30, 30);
@@ -45,26 +41,21 @@
 }
 
 .nav {
-    display: inline-block;
-    height: 54px;
+display: flex;
+
 }
 
 .nav-item {
-    display: inline-block;
     text-align: center;
-    height: 36px;
     font-size: .95em;
     padding: 15px 5px 0 5px;
-    margin: 0 0% 0 0%;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: rgb(3, 3, 3);
 
 }
 
 .nav-item:hover {
-    border-bottom: blue 3px solid;
-}
-
-.nav-item Link {
-    text-decoration: none;
-    font-family: 'Poppins';
-    color: rgb(3, 3, 3);
+    
 }
