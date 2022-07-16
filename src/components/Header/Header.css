@@ -21,7 +21,7 @@
     display: flex;
 }
 .pctitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     font-family: 'Poppins';
     color: rgb(31, 30, 30);
@@ -51,11 +51,9 @@ display: flex;
     padding: 15px 5px 0 5px;
     margin: 0;
     text-decoration: none;
+    font-size: .75rem;
     font-family: 'Poppins';
     color: rgb(3, 3, 3);
 
 }
 
-.nav-item:hover {
-    
-}
