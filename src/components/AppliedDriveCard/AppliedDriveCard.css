@@ -1,0 +1,40 @@
+.applied-drive-card {
+    height: 180px;
+    background-color: #e61c1c;
+    margin: 0;
+    border-radius: 0px;
+    padding: 0% 0% 0% 0%;
+    font-family: 'Poppins';
+    text-align: left;
+    border-radius: 5px;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.applied-drive-card:hover {
+    box-shadow: 1px 1px 8px #c7c7c7;
+}
+
+.applied-drive-card {
+    height: 100%;
+    padding-left: 0rem;
+    border-left: 2px solid #c7c7c7c7;
+}
+
+.applied-drive-card h3 {
+    color: #424242;
+    text-align: left;
+    font-weight: 500;
+}
+.applied-drive-card-left{
+    background-color: aqua;
+}
+.applied-drive-card-right {
+    background-color:green;
+}
+.applied-drive-card p {
+    color: #424242;
+}

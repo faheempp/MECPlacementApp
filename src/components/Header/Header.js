@@ -9,9 +9,9 @@ function Header({active}){
     return(
         <div className="header">
             <div className="logotitlecontainer">
-                <div className="logo">
+                {/* <div className="logo">
                     <img src={collegelogo} alt=""></img>
-                </div>
+                </div> */}
                 <div className="pctitle">Placement Cell</div>
                 {/* <div className="searchbar">Searchbars</div> */}
             </div>

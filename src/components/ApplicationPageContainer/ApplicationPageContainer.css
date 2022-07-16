@@ -1,8 +1,11 @@
-.appication-page-container{
+.application-page-container{
     text-align: center;
-        margin: 13% 5% 0 5%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        margin: 0% 5% 0 5%;
         flex-wrap: wrap;
 }
+.application-page-container .application-heading{
+    background-color: blueviolet;
+}
+.application-page-container .applied-drive-heading{
+        background-color:brown;
+    }

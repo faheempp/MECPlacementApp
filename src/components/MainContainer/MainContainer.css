@@ -1,10 +1,6 @@
 .main-container {
     text-align: center;
-<<<<<<< HEAD
-    margin: 8% 5% 0 5%;
-=======
     margin: 2% 5% 0 5%;
->>>>>>> c7b1d1d069d6c5fd5df8937c5bc2c5829dfbb5b3
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,3 +46,4 @@
         border-bottom: 2px rgb(224, 59, 59) solid;
         float: none;
 }
+

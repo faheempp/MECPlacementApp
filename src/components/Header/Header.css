@@ -20,13 +20,10 @@
 .logotitlecontainer{
     display: flex;
 }
-<<<<<<< HEAD
-.pctitle {
-    font-size: 1.2rem;
-=======
+
+
 .pctitle { 
-    font-size: 1.4rem;
->>>>>>> c7b1d1d069d6c5fd5df8937c5bc2c5829dfbb5b3
+    font-size: 1.2rem;
     font-weight: 500;
     font-family: 'Poppins';
     color: rgb(31, 30, 30);
