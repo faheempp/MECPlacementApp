@@ -4,27 +4,37 @@
     background-color: #ffffff; 
     margin: 0;
     border-radius: 0px;  
-    padding: 0% 1.5% 0% 1.5%;
+    padding: 1.5% 0% 1.5% 0%;
     font-family: 'Poppins';
     text-align: left;
     border-radius: 5px; 
     transition-property: box-shadow;
     transition-duration: 300ms;
+    min-width: 450px;
     
 }
 .driveinfo:hover{
     box-shadow: 1px 1px 8px #c7c7c7;
 }
 
-.driveinfo .side-card{ 
-    position: relative;  
-    right: 10rem;
-    float: right;
-    height:100%;
-    padding-left: 3rem;
-    border-left: 2px solid #c7c7c7c7;
+.driveinfo .right-card{ 
+    display: inline-block;
+    width: 47%;
+    height: 100%;
+    padding-left: 2%;
+    border-left: 1px solid #c7c7c7c7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-
+.driveinfo .left-card {
+    display: inline-block;
+    width: 48%;
+    float: left;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 2%;
+}
 .driveinfo h3 {
     color: #424242;
     text-align: left;
