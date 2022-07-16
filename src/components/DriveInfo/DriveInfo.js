@@ -5,14 +5,17 @@ function DriveInfo(){
     return(
         <div className="driveinfo">
           <div className="side-card">
-            <p className="requirements">Requirements</p>
-            <p className="last-date">Last Date</p>
+            <p className="requirements">Preferred requirements:</p>
+            <ul className="requirements">
+              <li>Requirement 1</li>
+              <li>Requirement 2</li>
+              <li>Requirement 3</li>
+              <li>Requirement 4</li>
+            </ul>
+            <p className="last-date">Last Date: 01/01/2020</p>
           </div>
           <h3>Company Name</h3>
-          <h2>Post: </h2>
-          <div>
-            <p>Other details</p>
-          </div>
+          <h2>Post</h2> 
           <button>View</button>
           
         </div>
