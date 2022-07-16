@@ -1,0 +1,23 @@
+.profile-page-container{
+    text-align: center;
+        margin: 0% 5% 0 5%;
+        flex-wrap: wrap;
+}
+.profile-page-container .profile-heading{
+    background-color: blueviolet;
+}
+.profile-page-container .profile-info-container{
+    background-color: aqua;
+    padding: 1rem 0 1rem 0;
+}
+.profile-page-container .profile-info-item{
+    background-color: blue;
+    margin: 1rem 0 1rem 0 ;
+    width: 10rem;
+}
+.profile-page-container .profile-info-item-name {
+    background-color: red;
+}
+.profile-page-container .profile-info-item-data {
+    background-color: blueviolet;
+}
