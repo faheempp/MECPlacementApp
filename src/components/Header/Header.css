@@ -20,8 +20,8 @@
 .logotitlecontainer{
     display: flex;
 }
-.pctitle {
-    font-size: 1rem;
+.pctitle { 
+    font-size: 1.4rem;
     font-weight: 500;
     font-family: 'Poppins';
     color: rgb(31, 30, 30);
@@ -47,12 +47,12 @@ display: flex;
 
 .nav-item {
     text-align: center;
-    font-size: .95em;
-    padding: 15px 5px 0 5px;
+    font-size: .8rem;
+    padding: 18px 20px 5px  20px;
     margin: 0;
     text-decoration: none;
     font-family: 'Poppins';
-    color: rgb(3, 3, 3);
+    color: #424242;
 
 }
 
