@@ -36,14 +36,16 @@
     background-color: #fafafa;
 
 }
-
+.news-container .news-list-container{
+    
+}
 .news-section-heading{
     text-align: left;
-        font-size: 1.3em;
-        display: block;
-        font-family: 'Poppins';
-        font-weight: 500;
-        border-bottom: 2px rgb(224, 59, 59) solid;
-        float: none;
+    font-size: 1.3em;
+    display: block;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-bottom: 2px #00acc1 solid;
+    float: none;
 }
 
