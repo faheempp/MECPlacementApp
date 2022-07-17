@@ -21,6 +21,7 @@ function Header({active}){
                 <Link to="/" className="nav-item">Home</Link>
                 <Link to="/application" className="nav-item">Application</Link>
                 <Link to="/profile" className="nav-item">Profile</Link>
+                <Link to="/signin" className="nav-item">Sign In</Link>
             </div>
         </div>
     )

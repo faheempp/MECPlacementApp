@@ -1,10 +1,13 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 import './App.css';
-import DriveInfo from './components/DriveInfo/DriveInfo';
+
 import Profile from './pages/Profile';
 import Home from './pages/Home';
 import Application from './pages/Application';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/application' element={<Application/>} />
           <Route path='/profile' element={<Profile />} />
+          <Route path='/signin' element={<SignIn/>} />
+          <Route path='/signup' element={<SignUp/>} />
+          <Route path='/admin' element={<Admin/>} />
         </Routes>
       </div>
     </BrowserRouter>
