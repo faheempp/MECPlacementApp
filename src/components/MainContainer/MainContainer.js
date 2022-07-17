@@ -14,7 +14,6 @@ function MainContainer(){
                     <DriveInfo />
                     <DriveInfo />
                     <DriveInfo />
-                    <DriveInfo />
                 </div>
             </div>
             <div className="news-container">

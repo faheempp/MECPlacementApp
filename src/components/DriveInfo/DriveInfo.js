@@ -15,10 +15,12 @@ function DriveInfo(){
             </ul>
             <p className="last-date">Last Date: 01/01/2020</p>
           </div>
+          <div className="main-card">            
           <h3>Company Name</h3>
           <h2>Post</h2> 
           <button>View</button>
 
+          </div>
           
         </div>
     )

@@ -16,6 +16,8 @@ function Header({active}){
                 {/* <div className="searchbar">Searchbars</div> */}
             </div>
             <div className="nav">
+
+                
                 <Link to="/" className="nav-item">Home</Link>
                 <Link to="/application" className="nav-item">Application</Link>
                 <Link to="/profile" className="nav-item">Profile</Link>
