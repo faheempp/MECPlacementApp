@@ -1,6 +1,6 @@
 .applied-drive-card {
     height: 180px;
-    background-color: #e61c1c;
+    background-color: #ffffff;
     margin: 0;
     border-radius: 0px;
     padding: 0% 0% 0% 0%;
@@ -10,31 +10,72 @@
     transition-property: box-shadow;
     transition-duration: 300ms;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    padding-left: 0rem;
+    border-left: 10px solid #5ddef4;
+    position: relative;
+    padding: 0.5% 1.5% 0% 1.5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 
 }
-
+.applied-drive-card button{
+    align-content: center;
+    width: 10rem;
+    height: 2rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border: 0.1rem solid #c7c7c7; 
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 2rem;
+    border-radius: 5px; 
+    color: #424242;
+    transition-property: background-color, border;
+    transition-duration: 300ms;
+}
+.applied-drive-card button:hover{
+    background-color: #5ddef4;
+    border: 0;
+}
 .applied-drive-card:hover {
     box-shadow: 1px 1px 8px #c7c7c7;
-}
-
-.applied-drive-card {
-    height: 100%;
-    padding-left: 0rem;
-    border-left: 2px solid #c7c7c7c7;
+    transform: translateY(-1px);
 }
 
 .applied-drive-card h3 {
     color: #424242;
     text-align: left;
-    font-weight: 500;
+    font-weight: 600;
+    margin: 0;
+}
+.applied-drive-card h4{
+    color: #424242;
+    text-align: left;
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin: 0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 .applied-drive-card-left{
-    background-color: aqua;
+    background-color: #ffffff; 
 }
-.applied-drive-card-right {
-    background-color:green;
+.applied-drive-card-right { 
+    padding-left: 2rem;
+    padding-right: 5rem;
+    color: #424242;
+    font-weight: 500;
+    text-align: left;
+    border-left: 2px solid rgba(199, 199, 199, 0.3);
 }
 .applied-drive-card p {
+    font-size: 0.8rem;
     color: #424242;
+    margin: 0rem;
+}
+.applied-drive-card-right p{
+    font-weight: 600;
+    font-size: 0.8rem;
 }

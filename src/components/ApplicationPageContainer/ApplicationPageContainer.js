@@ -4,9 +4,10 @@ import './ApplicationPageContainer.css';
 export default function ApplicationPageContainer(){
   return (
     <div className='application-page-container'>
-        <h2 className="application-heading">Application</h2>
-        <h3 className="applied-drive-heading">Applied Drives</h3>
-        <AppliedDriveCard/>
+        <h2 className="application-heading">Your Applications</h2>
+        <AppliedDriveCard status="evaluating"/>
+        <AppliedDriveCard status="accepted"/>
+        <AppliedDriveCard status="rejected"/>
     </div>
   )
 }

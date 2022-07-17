@@ -17,7 +17,7 @@ function DriveInfo(){
           </div>
           <div className="main-card">            
           <h3>Company Name</h3>
-          <h2>Post</h2> 
+          <h4>Post</h4> 
           <button>View</button>
 
           </div>

@@ -1,10 +1,16 @@
 .application-page-container{
     text-align: center;
-        margin: 0% 5% 0 5%;
-        flex-wrap: wrap;
+    margin: 3% 5% 0 5%;
+    flex-wrap: wrap;
 }
 .application-page-container .application-heading{
-    background-color: blueviolet;
+    text-align: left;
+    font-size: 1.3em;
+    display: block;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-bottom: 2px #00acc1 solid;
+    float: none;
 }
 .application-page-container .applied-drive-heading{
         background-color:brown;
