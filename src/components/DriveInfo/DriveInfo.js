@@ -4,6 +4,7 @@ import './DriveInfo.css';
 function DriveInfo(){
     return(
         <div className="driveinfo">
+
           <div className="side-card">
             <p className="requirements">Preferred requirements:</p>
             <ul className="requirements">
@@ -17,6 +18,7 @@ function DriveInfo(){
           <h3>Company Name</h3>
           <h2>Post</h2> 
           <button>View</button>
+
           
         </div>
     )

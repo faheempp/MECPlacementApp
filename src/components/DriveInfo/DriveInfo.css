@@ -4,6 +4,7 @@
     background-color: #ffffff; 
     margin: 0;
     border-radius: 0px;  
+
     padding: 0.5% 1.5% 0% 1.5%;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -13,12 +14,14 @@
     transition-property: transform, box-shadow;
     transition-duration: 300ms; 
     position: relative;
+
     
 }
 .driveinfo:hover{
     box-shadow: 1px 1px 8px #c7c7c7;
     transform: translateY(-1px);
 }
+
 
 .driveinfo .side-card{ 
     position: relative;    
@@ -27,8 +30,8 @@
     padding-left: 3rem;
     padding-right: 10rem;
     border-left: 2px solid rgba(199, 199, 199, 0.3);
-}
 
+}
 .driveinfo h3 {
     color: #424242;
     text-align: left;
