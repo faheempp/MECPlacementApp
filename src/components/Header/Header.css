@@ -23,11 +23,10 @@
 
 
 .pctitle { 
-    font-size: 1.2rem;
     font-weight: 500;
     font-family: 'Poppins';
     color: rgb(31, 30, 30);
-    padding: 14px 0 0px 0;
+    padding: 14px 0px 0px 20px;
     margin: 0 0 0 10px;
     display: inline-block;
     text-align: center;

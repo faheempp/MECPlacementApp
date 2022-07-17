@@ -1,52 +1,82 @@
-.driveinfo {
+.driveinfo {  
     width: 100%;
     height: 180px;  
     background-color: #ffffff; 
     margin: 0;
     border-radius: 0px;  
-    padding: 1.5% 0% 1.5% 0%;
+
+    padding: 0.5% 1.5% 0% 1.5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-family: 'Poppins';
     text-align: left;
     border-radius: 5px; 
-    transition-property: box-shadow;
-    transition-duration: 300ms;
-    min-width: 450px;
+    transition-property: transform, box-shadow;
+    transition-duration: 300ms; 
+    position: relative;
+
     
 }
 .driveinfo:hover{
     box-shadow: 1px 1px 8px #c7c7c7;
+    transform: translateY(-1px);
 }
 
-.driveinfo .right-card{ 
-    display: inline-block;
-    width: 47%;
-    height: 100%;
-    padding-left: 2%;
-    border-left: 1px solid #c7c7c7c7;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.driveinfo .left-card {
-    display: inline-block;
-    width: 48%;
-    float: left;
-    height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding-left: 2%;
+
+.driveinfo .side-card{ 
+    position: relative;    
+    float: right;
+    height:100%;  
+    padding-left: 3rem;
+    padding-right: 10rem;
+    border-left: 2px solid rgba(199, 199, 199, 0.3);
+
 }
 .driveinfo h3 {
     color: #424242;
     text-align: left;
-    font-weight: 500;
+    font-weight: 600;
+    margin: 0;  
 }
 .driveinfo h2 {
     color: #424242;
     text-align: left;
     font-family: 'Poppins';
-    font-weight: 500;
+    font-weight: 400;
+    margin: 0;
     font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.driveinfo button{
+    align-content: center;
+    width: 10rem;
+    height: 2rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border: 0;
+    background-color: #5ddef4; 
+    position: absolute;
+    bottom: 2rem;
+    border-radius: 5px; 
+    color: #424242;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.driveinfo button:hover{
+    background-color: #97ffff; 
 }
 .driveinfo p{
+    font-size: 0.8rem;
     color: #424242;
+    margin: 0rem;
+}
+.driveinfo .last-date{
+    position: absolute;
+    bottom: 1rem;
+    font-weight: 600;
+}
+.driveinfo .requirements{
+    font-size: 0.8rem;
+    color: #424242;
+    margin: 0rem;
 }

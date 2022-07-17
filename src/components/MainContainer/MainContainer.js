@@ -19,9 +19,11 @@ function MainContainer(){
             </div>
             <div className="news-container">
                 <h2 className="news-section-heading">News</h2>
-                <NewsCard/>
-                <NewsCard/>
-                <NewsCard/>
+                <div className="news-list-container">
+                    <NewsCard/>
+                    <NewsCard/>
+                    <NewsCard/>
+                </div>
             </div>
         </div>
     )
