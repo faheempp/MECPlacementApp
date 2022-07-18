@@ -2,9 +2,7 @@
     width: 100%;
     height: 180px;  
     background-color: #ffffff; 
-    margin: 0;
-    border-radius: 0px;  
-
+    margin: 0; 
     padding: 0.5% 1.5% 0% 1.5%;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -38,7 +36,7 @@
     font-weight: 600;
     margin: 0;  
 }
-.driveinfo h2 {
+.driveinfo h {
     color: #424242;
     text-align: left;
     font-family: 'Poppins';
