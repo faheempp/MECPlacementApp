@@ -1,26 +1,50 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addDrive } from '../../store/actions/driveActions';
+import { nanoid } from 'nanoid';
 
-export class CreateDrive extends Component {
-  state={
-        companyName:'',
-        briefInfo:'',
-        post:'',
-        slot:'',
-        lastDate:'',
-        location:'',
-        requirements:'',
-    }
-    handleChange=(e)=>{
-        this.setState({
-            [e.target.id]: e.target.value,
-        })
-    }
+
+function CreateDrive(){
+
+//   const state={
+//         companyName:'',
+//         briefInfo:'',
+//         post:'',
+//         slot:'',
+//         lastDate:'',
+//         location:'',
+//         requirements:'',
+//     }
+    const [companyName, setCompanyName]=useState('');
+    const [briefInfo, setBriefInfo]=useState('');
+    const [post, setPost]=useState('');
+    const [slot, setSlot]=useState('');
+    const [lastDate, setLastDate]=useState('');
+    const [location, setLocation]=useState('');
+    const [requirements, setRequirements]=useState('');
+
+    const dispatch=useDispatch();
+    // const handleChange=(e)=>{
+    //     this.setState({
+    //         [e.target.id]: e.target.value,
+    //     })
+
+    // }
     
-    handleSubmit=(e)=>{
+    const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(this.state);
+        //console.log(this.state);
+        dispatch(addDrive({
+            id: nanoid(),
+            companyName,
+            briefInfo,
+            post,
+            slot,
+            lastDate,
+            location,
+            requirements,
+        }))
     }
-  render() {
     return (
       <div className=''>
         <form onSubmit={this.handleSubmit}  className=''>
@@ -28,35 +52,35 @@ export class CreateDrive extends Component {
             
             <div className='input-field'>
                 <label htmlFor='companyName'>Company Name</label>
-                <input type="text" id="companyName"  onChange={this.handleChange}></input>
+                <input type="text" id="companyName" value={companyName}  onChange={(e)=>setCompanyName(e.target.value)}></input>
             </div>
             <div className='input-field'>
                 <label htmlFor='briefInfo'>Brief Info</label>
-                <input type="text" id="briefInfo"  onChange={this.handleChange}></input>
+                <input type="text" id="briefInfo" value={briefInfo} onChange={(e)=>setBriefInfo(e.target.value)}></input>
             </div>
             
             
             <div className='input-field'>
                 <label htmlFor='post'>Post</label>
-                <input type="text" id="post"  onChange={this.handleChange}></input>
+                <input type="text" id="post" value={post }onChange={(e)=>setPost(e.target.value)}></input>
             </div>
             
             <div className='input-field'>
                 <label htmlFor='slot'>Slot</label>
-                <input type="text" id="slot"  onChange={this.handleChange}></input>
+                <input type="text" id="slot"  value={slot}onChange={(e)=>setSlot(e.target.value)}></input>
             </div>
             <div className='input-field'>
                 <label htmlFor='requirements'>Requirements</label>
-                <input type="text" id="requirements" onChange={this.handleChange}></input>
+                <input type="text" id="requirements" value={requirements}onChange={(e)=>setRequirements(e.target.value)}></input>
             </div>
             
             <div className='input-field'>
                 <label htmlFor='location'>Location</label>
-                <input type="text" id="location" onChange={this.handleChange}></input>
+                <input type="text" id="location" value={location} onChange={(e)=>setLocation(e.target.value)}></input>
             </div>
             <div className='input-field'>
                 <label htmlFor='lastDate'>Last date</label>
-                <input type="date" id="lastDate"  onChange={this.handleChange}></input>
+                <input type="date" id="lastDate" value={lastDate}onChange={(e)=>setLastDate(e.target.value)}></input>
             </div>
             <div className='input-field'>
                 <button className='create-drive-button'>Create Drive</button>
@@ -64,7 +88,7 @@ export class CreateDrive extends Component {
         </form>
       </div>
     )
-  }
+  
 }
 
 export default CreateDrive

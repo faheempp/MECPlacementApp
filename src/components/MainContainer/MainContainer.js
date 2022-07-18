@@ -1,19 +1,29 @@
-import React from "react";
 
 import DriveInfo from "../DriveInfo/DriveInfo";
 import './MainContainer.css';
+import '../DriveInfo/DriveInfo.css';
 import NewsCard from "../NewsCard/NewsCard";
+import { useSelector } from 'react-redux';
 
+import React from 'react'
 
-function MainContainer(){
-     return(
+export default function MainContainer() {
+
+    const drives=useSelector(state => state.drives.drives)
+    const drivedetail= drives.map(drive=>
+        <div className="driveinfo">
+            <div>{drive.companyName}</div>
+            <div>{drive.post}</div>
+            <div>{drive.slot}</div>
+        </div>
+        
+        )
+  return(
         <div className="main-container">
             <div className="upcomingdrives">
                 <h2 className="upcomingdrivesheading">Upcoming Drives</h2>
                 <div className="driveinfocontainer">
-                    <DriveInfo />
-                    <DriveInfo />
-                    <DriveInfo />
+                    {drivedetail}
                 </div>
             </div>
             <div className="news-container">
@@ -27,5 +37,3 @@ function MainContainer(){
         </div>
     )
 }
-
-export default MainContainer;

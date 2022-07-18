@@ -10,14 +10,14 @@ function DriveInfo(){
             <ul className="requirements">
               <li>Requirement 1</li>
               <li>Requirement 2</li>
-              <li>Requirement 3</li>
-              <li>Requirement 4</li>
             </ul>
             <p className="last-date">Last Date: 01/01/2020</p>
           </div>
           <div className="main-card">            
-          <h3>Company Name</h3>
-          <h2>Post</h2> 
+          <h3 className="company-name">Company Name</h3>
+          <h2 className="drive-post-name">Post</h2>
+          <div className="company-slot">c2</div> 
+          <div className="company-location">Kochi</div> 
           <button>View</button>
 
           </div>
