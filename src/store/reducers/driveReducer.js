@@ -5,13 +5,13 @@ import { addDrive,removeDrive } from "../actions/driveActions";
 const initState={
     drives:[
         {
-            companyName:"key value",briefInfo:"a product based company",slot:"c2",requirements:"no backlogs",
-        post:"software engg",location:"kochi",lastDate:"18/08/22"
+            companyName:"key value",slot:"c2",
+        post:"software engg",id:1
         },
 
         {
-            companyName:"fdl",briefInfo:"a start up company",slot:"b2",requirements:"not more 3 backlogs",
-            post:"software engg",location:"trivandrum",lastDate:"11/08/22"
+            companyName:"fdl",slot:"b2",
+            post:"software engg",id:2
         },
     ]
 }

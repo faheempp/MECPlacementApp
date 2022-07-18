@@ -1,94 +1,63 @@
+
+import { nanoid } from 'nanoid';
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addDrive } from '../../store/actions/driveActions';
-import { nanoid } from 'nanoid';
-
-
-function CreateDrive(){
-
-//   const state={
-//         companyName:'',
-//         briefInfo:'',
-//         post:'',
-//         slot:'',
-//         lastDate:'',
-//         location:'',
-//         requirements:'',
-//     }
-    const [companyName, setCompanyName]=useState('');
-    const [briefInfo, setBriefInfo]=useState('');
-    const [post, setPost]=useState('');
+export default function CreateDrive() {
+    const [companyName,setCompanyName]=useState('');
     const [slot, setSlot]=useState('');
-    const [lastDate, setLastDate]=useState('');
-    const [location, setLocation]=useState('');
-    const [requirements, setRequirements]=useState('');
+    const [post,setPost]=useState('');
 
     const dispatch=useDispatch();
-    // const handleChange=(e)=>{
-    //     this.setState({
-    //         [e.target.id]: e.target.value,
-    //     })
-
-    // }
-    
-    const handleSubmit=(e)=>{
+    const addNewDrive=(e)=>{
         e.preventDefault();
-        //console.log(this.state);
+        console.log(companyName,post);
         dispatch(addDrive({
-            id: nanoid(),
             companyName,
-            briefInfo,
             post,
             slot,
-            lastDate,
-            location,
-            requirements,
+            id:nanoid()
         }))
     }
-    return (
-      <div className=''>
-        <form onSubmit={this.handleSubmit}  className=''>
-            <h5 className='signin-heading'>Create new drive</h5>
-            
-            <div className='input-field'>
-                <label htmlFor='companyName'>Company Name</label>
-                <input type="text" id="companyName" value={companyName}  onChange={(e)=>setCompanyName(e.target.value)}></input>
+
+  return (
+    <div>
+        <h3>Create new drive</h3>
+        <form>
+            <div>
+                <label htmlFor="companyName">Company Name</label>
+                <input 
+                    type="text" 
+                    name="companyName"
+                    id="companyName"
+                    value={companyName}
+                    onChange={(e)=>setCompanyName(e.target.value)}
+                />
             </div>
-            <div className='input-field'>
-                <label htmlFor='briefInfo'>Brief Info</label>
-                <input type="text" id="briefInfo" value={briefInfo} onChange={(e)=>setBriefInfo(e.target.value)}></input>
+             <div>
+                <label htmlFor="post">Post</label>
+                <input 
+                    type="text" 
+                    name="post"
+                    id="post"
+                    value={post}
+                    onChange={(e)=>setPost(e.target.value)}
+                />
             </div>
-            
-            
-            <div className='input-field'>
-                <label htmlFor='post'>Post</label>
-                <input type="text" id="post" value={post }onChange={(e)=>setPost(e.target.value)}></input>
+            <div>
+                <label htmlFor="slot">Slot</label>
+                <input 
+                    type="text" 
+                    name="slot"
+                    id="slot"
+                    value={slot}
+                    onChange={(e)=>setSlot(e.target.value)}
+                />  
             </div>
-            
-            <div className='input-field'>
-                <label htmlFor='slot'>Slot</label>
-                <input type="text" id="slot"  value={slot}onChange={(e)=>setSlot(e.target.value)}></input>
-            </div>
-            <div className='input-field'>
-                <label htmlFor='requirements'>Requirements</label>
-                <input type="text" id="requirements" value={requirements}onChange={(e)=>setRequirements(e.target.value)}></input>
-            </div>
-            
-            <div className='input-field'>
-                <label htmlFor='location'>Location</label>
-                <input type="text" id="location" value={location} onChange={(e)=>setLocation(e.target.value)}></input>
-            </div>
-            <div className='input-field'>
-                <label htmlFor='lastDate'>Last date</label>
-                <input type="date" id="lastDate" value={lastDate}onChange={(e)=>setLastDate(e.target.value)}></input>
-            </div>
-            <div className='input-field'>
-                <button className='create-drive-button'>Create Drive</button>
+            <div>
+                <button onClick={addNewDrive}>Add new drive</button>
             </div>
         </form>
-      </div>
-    )
-  
+    </div>
+  )
 }
-
-export default CreateDrive
