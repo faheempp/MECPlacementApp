@@ -9,21 +9,21 @@ import React from 'react'
 
 export default function MainContainer() {
 
-    const drives=useSelector(state => state.drives.drives)
-    const drivedetail= drives.map(drive=>
-        <div className="driveinfo">
-            <div>{drive.companyName}</div>
-            <div>{drive.post}</div>
-            <div>{drive.slot}</div>
-        </div>
+    // const drives=useSelector(state => state.drives.drives)
+    // const drivedetail= drives.map(drive=>
+    //     <div className="driveinfo">
+    //         <div>{drive.companyName}</div>
+    //         <div>{drive.post}</div>
+    //         <div>{drive.slot}</div>
+    //     </div>
         
-        )
+    //     )
   return(
         <div className="main-container">
             <div className="upcomingdrives">
                 <h2 className="upcomingdrivesheading">Upcoming Drives</h2>
                 <div className="driveinfocontainer">
-                    {drivedetail}
+                    <driveinfo/>
                 </div>
             </div>
             <div className="news-container">

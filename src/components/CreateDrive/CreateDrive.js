@@ -1,23 +1,40 @@
 
 import { nanoid } from 'nanoid';
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import driveDataService from "../../services/drive.services"
+
 import { addDrive } from '../../store/actions/driveActions';
 export default function CreateDrive() {
     const [companyName,setCompanyName]=useState('');
     const [slot, setSlot]=useState('');
     const [post,setPost]=useState('');
-
-    const dispatch=useDispatch();
-    const addNewDrive=(e)=>{
+    const [message,setMessage]=useState({error:false,msg:""});
+    
+    const addNewDrive=async (e)=>{
         e.preventDefault();
-        console.log(companyName,post);
-        dispatch(addDrive({
+        setMessage("");
+        if(companyName === "" || slot==="" || post ===""){
+            setMessage({error:true,msg:"all fields are mandatory"});
+            return;
+        }
+        const newDrive={
             companyName,
-            post,
             slot,
-            id:nanoid()
-        }))
+            post,
+        }
+        console.log(newDrive);
+
+        try{
+            await driveDataService.addDrive(newDrive);
+            setMessage({error:false,msg:"new drive added"});
+        }
+        catch(err){
+            setMessage({error:true,msg:err.message});
+        }
+
+        setCompanyName("");
+        setPost("");
+        setSlot("");
     }
 
   return (

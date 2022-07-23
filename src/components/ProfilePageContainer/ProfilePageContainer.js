@@ -6,20 +6,19 @@ export default function ProfilePageContainer(){
     <div className='profile-page-container'>
         <h2 className="profile-heading">Profile</h2>
         <div className='profile-info-container'>
+          <div className='img1'>
+            <img src={louisimg}></img>
+          </div>
 
-          <div className='profile-info-item profile-image'>
-            <div className='profile-info-item-name'>
-            </div>
-            <div className='profile-info-item-data'>
-              <img src={louisimg}></img>
-            </div>
+          <div className='con1'>
+          <div className='line'>
           </div>
           <div className='profile-info-item'>
             <div className='profile-info-item-name'>
               Name
             </div>
             <div className='profile-info-item-data'>
-              Louis Emmanuel Thomas
+            <input type="text" class="form-control" placeholder="enter name" value=""/>
             </div>
           </div>
 
@@ -28,7 +27,7 @@ export default function ProfilePageContainer(){
               Branch
             </div>
             <div className='profile-info-item-data'>
-              Electronics and Communication
+            <input type="text" class="form-control" placeholder="enter branch" value=""/>
             </div>
           </div>
 
@@ -37,7 +36,7 @@ export default function ProfilePageContainer(){
               Semester
             </div>
             <div className='profile-info-item-data'>
-              6
+            <input type="text" class="form-control" placeholder="enter semester" value=""/>
             </div>
           </div>
 
@@ -46,7 +45,7 @@ export default function ProfilePageContainer(){
               CGPA Aggregate
             </div>
             <div className='profile-info-item-data'>
-              9.01
+            <input type="text" class="form-control" placeholder="enter value" value=""/>
             </div>
           </div>
           
@@ -56,7 +55,7 @@ export default function ProfilePageContainer(){
               Email
             </div>
             <div className='profile-info-item-data'>
-              loose@gmail.com
+            <input type="text" class="form-control" placeholder="enter email id" value=""/>
             </div>
           </div>
 
@@ -65,7 +64,7 @@ export default function ProfilePageContainer(){
               Contact No
             </div>
             <div className='profile-info-item-data'>
-              9999999999
+            <input type="text" class="form-control" placeholder="enter contact number" value=""/>
             </div>
           </div>
 
@@ -74,7 +73,7 @@ export default function ProfilePageContainer(){
               LinkedIn
             </div>
             <div className='profile-info-item-data'>
-              Link here
+            <input type="text" class="form-control" placeholder="linkedin link here" value=""/>
             </div>
           </div>
 
@@ -83,7 +82,7 @@ export default function ProfilePageContainer(){
               GitHub
             </div>
             <div className='profile-info-item-data'>
-              GH Link here
+            <input type="text" class="form-control" placeholder="github link here" value=""/>
             </div>
           </div>
 
@@ -92,7 +91,7 @@ export default function ProfilePageContainer(){
               Portfolio
             </div>
             <div className='profile-info-item-data'>
-              Portfolio Link here
+            <input type="text" class="form-control" placeholder="portfolio link here" value=""/>
             </div>
           </div>
 
@@ -101,15 +100,16 @@ export default function ProfilePageContainer(){
               Resume
             </div>
             <div className='profile-info-item-data'>
-              Link here
+            <input type="text" class="form-control" placeholder="resume link here" value=""/>
             </div>
           </div>
-
           <div className='update-profile-button'>
             <button>
               Update Profile
             </button>
           </div>
+          </div>
+
         </div>
     </div>
   )
