@@ -25,4 +25,4 @@ class NewsDataService{
     }
 }
 
-export default NewsDataService
+export default new NewsDataService();
