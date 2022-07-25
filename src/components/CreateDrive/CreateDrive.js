@@ -1,9 +1,8 @@
 
 import { nanoid } from 'nanoid';
 import React, { useState } from 'react'
-import driveDataService from "../../services/drive.services"
+import DriveDataService from "../../services/drive.services"
 
-import { addDrive } from '../../store/actions/driveActions';
 export default function CreateDrive() {
     const [companyName,setCompanyName]=useState('');
     const [slot, setSlot]=useState('');
@@ -25,7 +24,7 @@ export default function CreateDrive() {
         console.log(newDrive);
 
         try{
-            await driveDataService.addDrive(newDrive);
+            await DriveDataService.addDrive(newDrive);
             setMessage({error:false,msg:"new drive added"});
         }
         catch(err){

@@ -3,27 +3,38 @@ import DriveInfo from "../DriveInfo/DriveInfo";
 import './MainContainer.css';
 import '../DriveInfo/DriveInfo.css';
 import NewsCard from "../NewsCard/NewsCard";
-import { useSelector } from 'react-redux';
-
-import React from 'react'
-
+//import { useSelector } from 'react-redux';
+import React, { useEffect,useState } from 'react'
+import DriveDataService from '../../services/drive.services.js'
 export default function MainContainer() {
 
-    // const drives=useSelector(state => state.drives.drives)
-    // const drivedetail= drives.map(drive=>
-    //     <div className="driveinfo">
-    //         <div>{drive.companyName}</div>
-    //         <div>{drive.post}</div>
-    //         <div>{drive.slot}</div>
-    //     </div>
-        
-    //     )
+    const [drives, setDrives]=useState([]);
+
+    useEffect (()=>{
+        getDrives();
+    },[])
+
+    const getDrives= async ()=>{
+        const data= await DriveDataService.getAllDrives();
+        console.log(data.docs)
+        setDrives(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
+    }
   return(
         <div className="main-container">
+            {/* <pre>{JSON.stringify(drives,undefined,2)}</pre> */}
             <div className="upcomingdrives">
                 <h2 className="upcomingdrivesheading">Upcoming Drives</h2>
                 <div className="driveinfocontainer">
-                    <driveinfo/>
+                    {drives.map((doc,index)=>{
+                        return (
+                            <DriveInfo 
+                                companyName={doc.companyName} 
+                                post={doc.post}
+                                slot={doc.slot}
+                                />
+                        )
+                        })}
+                    {/* <driveinfo/> */}
                 </div>
             </div>
             <div className="news-container">
@@ -37,3 +48,4 @@ export default function MainContainer() {
         </div>
     )
 }
+

@@ -1,7 +1,11 @@
 import React from "react";
 import './DriveInfo.css';
 
-function DriveInfo(){
+function DriveInfo(props){
+  const companyName=props.companyName;
+  const slot=props.slot;
+  const post=props.post;
+  console.log(props)
     return(
         <div className="driveinfo">
 
@@ -14,9 +18,9 @@ function DriveInfo(){
             <p className="last-date">Last Date: 01/01/2020</p>
           </div>
           <div className="main-card">            
-          <h3 className="company-name">Company Name</h3>
-          <h2 className="drive-post-name">Post</h2>
-          <div className="company-slot">c2</div> 
+          <h3 className="company-name">{companyName}</h3>
+          <h2 className="drive-post-name">Post:{post}</h2>
+          <div className="company-slot">Slot:{slot}</div> 
           <div className="company-location">Kochi</div> 
           <button>View</button>
 

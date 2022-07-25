@@ -4,7 +4,7 @@ import {collection, getDocs, getDoc, addDoc,updateDoc, deleteDoc, doc} from "fir
 
 const driveCollectionRef = collection(db,"drives");
 class DriveDataService{
-    addNewDrive=(newDrive)=>{
+    addDrive=(newDrive)=>{
         return addDoc(driveCollectionRef, newDrive);
     }
 
@@ -24,9 +24,9 @@ class DriveDataService{
 
     getDrive=(id)=>{
         const driveDoc=doc(db,"drives",id);
-        return getDocs(driveDoc);
+        return getDoc(driveDoc);
     }
 }
 
 
-export default DriveDataService;
+export default new DriveDataService();
