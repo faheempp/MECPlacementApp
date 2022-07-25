@@ -6,12 +6,16 @@ import NewsCard from "../NewsCard/NewsCard";
 //import { useSelector } from 'react-redux';
 import React, { useEffect,useState } from 'react'
 import DriveDataService from '../../services/drive.services.js'
+import NewsDataService from "../../services/news.services";
+import { doc } from "firebase/firestore";
 export default function MainContainer() {
 
     const [drives, setDrives]=useState([]);
+    const [news,setNews]=useState([]);
 
     useEffect (()=>{
         getDrives();
+        getNews();
     },[])
 
     const getDrives= async ()=>{
@@ -19,9 +23,13 @@ export default function MainContainer() {
         console.log(data.docs)
         setDrives(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
     }
+    const getNews=async ()=>{
+        const data= await NewsDataService.getAllNews();
+        console.log(data.docs)
+        setNews(data.docs.map((doc)=>({...doc.data(),id: doc.id}))) 
+    }
   return(
         <div className="main-container">
-            {/* <pre>{JSON.stringify(drives,undefined,2)}</pre> */}
             <div className="upcomingdrives">
                 <h2 className="upcomingdrivesheading">Upcoming Drives</h2>
                 <div className="driveinfocontainer">
@@ -34,15 +42,17 @@ export default function MainContainer() {
                                 />
                         )
                         })}
-                    {/* <driveinfo/> */}
+                    
                 </div>
             </div>
             <div className="news-container">
                 <h2 className="news-section-heading">News</h2>
                 <div className="news-list-container">
-                    <NewsCard/>
-                    <NewsCard/>
-                    <NewsCard/>
+                    {news.map((doc,index)=>{
+                        return(
+                            <NewsCard newsHeading={doc.newsHeading} newsContent={doc.newsContent}/>
+                        )
+                    })}
                 </div>
             </div>
         </div>

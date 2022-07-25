@@ -10,7 +10,7 @@ class DriveDataService{
 
     updateDrive=(id, updatedDrive)=>{
         const  driveDoc=doc(db,"drives",id);
-        return updateDoc(driveDoc, updateDoc);
+        return updateDoc(driveDoc, updatedDrive);
     }
 
     deleteDrive=(id)=>{
