@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header/Header';
+import './SignIn.css';
+
 class SignIn extends Component {
     state={
         email:'',
@@ -18,26 +20,28 @@ class SignIn extends Component {
     }
   render() {
     return (
-      <div className='SignIn-page-conatiner'>
-        <Header/>
-        <form onSubmit={this.handleSubmit}  className='sa'>
-            <h5 className='signin-heading'>Sign In</h5>
-            <div className='input-field'>
-                <label htmlFor='email'>Email</label>
-                <input type="email" id="email" onChange={this.handleChange}></input>
+      <div className='signin-page-container'>
+        <div className='title-section'>
+            <h1 className='signinpage-pctitle'>Placement Cell</h1>
+        </div>
+        <div className='signin-form-container'>
+                <form onSubmit={this.handleSubmit}  className='sa'>
+                {/* <h5 className='signin-heading'>Sign In</h5> */}
+                <div className='input-field'>
+                    <label htmlFor='email'>Email</label>
+                    <input type="email" id="email" onChange={this.handleChange}></input>
+                </div>
+                <div className='input-field'>
+                    <label htmlFor='password'>Password</label>
+                    <input type="password" id="password"  onChange={this.handleChange}></input>
+                </div>
+                <div className='input-field signin-button-container'>
+                    <button className='signin-button'>Login</button>
+                </div> 
+            </form>
+            <div className='formfooter' >Doesn't have an account? <Link to="/signup" className="">Sign Up</Link></div>
+                
             </div>
-            <div className='input-field'>
-                <label htmlFor='password'>Password</label>
-                <input type="password" id="password"  onChange={this.handleChange}></input>
-            </div>
-            <div className='input-field'>
-                <button className='signin-button'>Login</button>
-            </div>
-            
-        </form>
-        <Link to="/signup" className="">
-                <p>doesn't have an account? Sign Up</p>
-                </Link>
       </div>
     )
   }

@@ -13,6 +13,7 @@ export default function CreateDrive() {
     const [slot, setSlot]=useState('');
     const [post,setPost]=useState('');
     const [remarks,setRemarks]=useState("");
+    const [lastDate,setLastDate]=useState("");
     const [message,setMessage]=useState({error:false,msg:""});
     
     const addNewDrive=async (e)=>{
@@ -31,6 +32,7 @@ export default function CreateDrive() {
             pay,
             slot,
             post,
+            lastDate,
             remarks
         }
         console.log(newDrive);
@@ -51,6 +53,7 @@ export default function CreateDrive() {
         setPay("");
         setSlot("");
         setPost("");
+        setLastDate("");
         setRemarks("");
     
     }
@@ -150,6 +153,16 @@ export default function CreateDrive() {
                 />
             </div>
             
+            <div>
+                <label htmlFor="lastDate">Last Date</label>
+                <input 
+                    type="text" 
+                    name="lastDate"
+                    id="lastDate"
+                    value={lastDate}
+                    onChange={(e)=>setLastDate(e.target.value)}
+                />
+            </div>            
             <div>
                 <button onClick={addNewDrive}>Add new drive</button>
             </div>

@@ -18,7 +18,7 @@ export default function ProfilePageContainer(){
               Name
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="enter name" value=""/>
+              Louis Emmanuel Thomas
             </div>
           </div>
 
@@ -27,7 +27,7 @@ export default function ProfilePageContainer(){
               Branch
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="enter branch" value=""/>
+              Electronics and Communication
             </div>
           </div>
 
@@ -36,7 +36,7 @@ export default function ProfilePageContainer(){
               Semester
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="enter semester" value=""/>
+              6
             </div>
           </div>
 
@@ -45,7 +45,7 @@ export default function ProfilePageContainer(){
               CGPA Aggregate
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="enter value" value=""/>
+              8.9
             </div>
           </div>
           
@@ -55,7 +55,7 @@ export default function ProfilePageContainer(){
               Email
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="enter email id" value=""/>
+              emmanuel.mec@gmail.com
             </div>
           </div>
 
@@ -64,7 +64,7 @@ export default function ProfilePageContainer(){
               Contact No
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="enter contact number" value=""/>
+              989009989
             </div>
           </div>
 
@@ -73,7 +73,7 @@ export default function ProfilePageContainer(){
               LinkedIn
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="linkedin link here" value=""/>
+              linkedinlinkhere.com
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export default function ProfilePageContainer(){
               GitHub
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="github link here" value=""/>
+              githublikhere.com
             </div>
           </div>
 
@@ -91,7 +91,7 @@ export default function ProfilePageContainer(){
               Portfolio
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="portfolio link here" value=""/>
+              louis.com
             </div>
           </div>
 
@@ -100,7 +100,7 @@ export default function ProfilePageContainer(){
               Resume
             </div>
             <div className='profile-info-item-data'>
-            <input type="text" class="form-control" placeholder="resume link here" value=""/>
+              louis.resume          
             </div>
           </div>
           <div className='update-profile-button'>

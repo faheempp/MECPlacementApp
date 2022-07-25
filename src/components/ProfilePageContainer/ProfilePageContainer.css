@@ -3,7 +3,6 @@
     margin: 3% 5% 0 5%;
     flex-wrap: wrap;
     padding-left: 0px;
-    background-color: #ffff;
 }
 .img1{
     background-color:#ffff;
@@ -54,10 +53,12 @@
     
 }
 .profile-info-item-name {
-    background-color: #ffff;
+    font-size: .8rem;
+    border-bottom: 1px blue solid;
+    color: rgb(59, 56, 56);
 }
 .profile-info-item-data {
-    background-color: #ffff;
+    font-size: .9rem;
 }
 .update-profile-button{
     padding-top: 20px;

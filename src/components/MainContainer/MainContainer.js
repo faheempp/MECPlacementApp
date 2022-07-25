@@ -39,6 +39,9 @@ export default function MainContainer() {
                                 companyName={doc.companyName} 
                                 post={doc.post}
                                 slot={doc.slot}
+                                location={doc.location}
+                                criteria={doc.criteria}
+                                lastDate={doc.lastDate}
                                 />
                         )
                         })}

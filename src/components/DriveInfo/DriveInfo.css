@@ -1,9 +1,9 @@
 .driveinfo {  
     width: 100%;
-    height: 180px;  
-    background-color: #ffffff; 
+    min-height: 190px;  
+    background-color:    #ffffff; 
     margin: 0; 
-    padding: 0.5% 1.5% 0% 1.5%;
+    padding: 0.5rem 1rem 0rem 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-family: 'Poppins';
@@ -12,6 +12,9 @@
     transition-property: transform, box-shadow;
     transition-duration: 300ms; 
     position: relative;
+    display: flex;
+    justify-content: left;
+    
 
     
 }
@@ -20,14 +23,19 @@
     transform: translateY(-1px);
 }
 
-
-.driveinfo .side-card{ 
-    position: relative;    
-    float: right;
-    height:100%;  
-    padding-left: 3rem;
-    padding-right: 10rem;
+.drive-info-left-card{
+    
+    display: inline-block;
+    height: 100%;
+    flex: .5;
+}
+.driveinfo .drive-info-right-card{ 
+    min-height: 150px;  
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
     border-left: 2px solid rgba(199, 199, 199, 0.3);
+    flex: .5;
 
 }
 .driveinfo h3 {
@@ -75,9 +83,9 @@
     margin: 0rem;
 }
 .driveinfo .last-date{
-    position: absolute;
-    bottom: 1rem;
+    font-size: .75rem;
     font-weight: 600;
+    margin-top: 1rem;
 }
 .driveinfo .requirements{
     font-size: 0.8rem;
