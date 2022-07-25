@@ -1,6 +1,7 @@
 //npm install -g firebase-tools
-import { initializeApp } from "firebase/app";
-import {getFirestore} from "firebase/firestore";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBGxtfAReJN3vQI6oXZf4G5TE4gCiO8hI8",
@@ -12,6 +13,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
 
-export const db =getFirestore(app);
+
+const fireApp = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const auth = firebase.auth();
+export { db, auth, fireApp }
