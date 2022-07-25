@@ -36,14 +36,20 @@
     font-weight: 600;
     margin: 0;  
 }
-.driveinfo h {
+.driveinfo h2 {
     color: #424242;
     text-align: left;
     font-family: 'Poppins';
     font-weight: 400;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
+}
+.driveinfo div{
+    font-size: 0.8rem;
+    color: #424242;
+    text-align: left;
+    font-family: 'Poppins';
 }
 .driveinfo button{
     align-content: center;
@@ -52,16 +58,16 @@
     font-family: 'Poppins';
     font-weight: 500;
     border: 0;
-    background-color: #5ddef4; 
+    background-color: #97ffff; 
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     border-radius: 5px; 
     color: #424242;
     transition-property: background-color;
     transition-duration: 300ms;
 }
 .driveinfo button:hover{
-    background-color: #97ffff; 
+    background-color: #5ddef4; 
 }
 .driveinfo p{
     font-size: 0.8rem;
