@@ -22,7 +22,7 @@ function App() {
           <Route path='/signin' element={<SignIn/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/admin' element={<Admin/>} />
-          <Route path='/drivedetail' element={<DriveDetail/>} />
+          <Route path='/drivedetail/:driveid' element={<DriveDetail/>} />
           <Route path='admin/update' element={<Update/>}/>
         </Routes>
       </div>

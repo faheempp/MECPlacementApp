@@ -20,12 +20,12 @@ export default function MainContainer() {
 
     const getDrives= async ()=>{
         const data= await DriveDataService.getAllDrives();
-        console.log(data.docs)
+        // console.log(data.docs)
         setDrives(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
     }
     const getNews=async ()=>{
         const data= await NewsDataService.getAllNews();
-        console.log(data.docs)
+        // console.log(data.docs)
         setNews(data.docs.map((doc)=>({...doc.data(),id: doc.id}))) 
     }
   return(
@@ -42,6 +42,7 @@ export default function MainContainer() {
                                 location={doc.location}
                                 criteria={doc.criteria}
                                 lastDate={doc.lastDate}
+                                id={doc.id}
                                 />
                         )
                         })}

@@ -1,6 +1,7 @@
 import React from 'react'
 import CreateDrive from '../components/CreateDrive/CreateDrive';
 import CreateNews from '../components/CreateNews/CreateNews';
+import EditDriveContainer from '../components/EditDriveContainer/EditDriveContainer';
 import AdminHeader from '../components/Header/AdminHeader';
 
 export default function Admin() {
@@ -8,7 +9,8 @@ export default function Admin() {
     <div>
       <div className='admin-page'>
         <AdminHeader/>
-        <CreateDrive/>
+        {/* <CreateDrive/> */}
+        <EditDriveContainer/>
         <CreateNews/>
     </div>
     </div>
