@@ -9,8 +9,7 @@ export default function Admin() {
     <div>
       <div className='admin-page'>
         <AdminHeader/>
-        {/* <CreateDrive/> */}
-        <EditDriveContainer/>
+        <CreateDrive/>
         <CreateNews/>
     </div>
     </div>

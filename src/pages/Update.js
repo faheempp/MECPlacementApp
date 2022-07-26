@@ -2,6 +2,7 @@ import React from 'react'
 import CreateDrive from '../components/CreateDrive/CreateDrive';
 import CreateNews from '../components/CreateNews/CreateNews';
 import AdminHeader from '../components/Header/AdminHeader';
+import EditDriveContainer from '../components/EditDriveContainer/EditDriveContainer';
 import Header from '../components/Header/Header';
 
 export default function Update() {
@@ -9,9 +10,7 @@ export default function Update() {
     <div>
       <div className='admin-page'>
         <AdminHeader/>
-        <h1>Update Page</h1>
-        <CreateDrive/>
-        <CreateNews/>
+        <EditDriveContainer/>
     </div>
     </div>
   )
