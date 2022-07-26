@@ -9,6 +9,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Admin from './pages/Admin';
 import Update from './pages/Update';
+import DriveDetail from './pages/DriveDetail'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/signin' element={<SignIn/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/admin' element={<Admin/>} />
+          <Route path='/drivedetail' element={<DriveDetail/>} />
           <Route path='admin/update' element={<Update/>}/>
         </Routes>
       </div>

@@ -1,0 +1,175 @@
+.drive-detail-page-container {
+    text-align: center;
+    margin: 3% 5% 0 5%;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+
+.img1 {
+    
+}
+
+.drive-detail-heading {
+    text-align: left;
+    font-size: 1.3em;
+    display: block;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-bottom: 2px #00acc1 solid;
+    float: none;
+}
+
+.con1 {
+    background-color: #ffff;
+    width: 400px;
+    margin-left: 500px;
+    margin-top: -250px;
+    border-left: 3px solid #0000002a;
+    height: 100%;
+    border-radius: 0px;
+    margin-bottom: 20px;
+
+}
+
+.profile-info-container {
+    background-color: #ffff;
+    border-left: 10px solid #5ddef4;
+    font-family: 'Poppins';
+    text-align: center;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    text-align: left;
+    border-radius: 5px;
+    margin-top: 5px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.profile-info-item {
+    background-color: #ffff;
+    width: 10rem;
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
+
+.profile-info-item-name {
+    font-size: .8rem;
+    border-bottom: 1px blue solid;
+    color: rgb(59, 56, 56);
+}
+
+.profile-info-item-data {
+    font-size: .9rem;
+}
+
+.update-profile-button {
+    padding-top: 20px;
+    padding-left: 50px;
+    margin-left: 0px
+}
+
+
+
+.drive-detail-info {
+    width: 100%;
+    min-height: 190px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0.5rem 1rem 0rem 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Poppins';
+    text-align: left;
+    border-radius: 5px;
+    transition-property: transform, box-shadow;
+    transition-duration: 300ms;
+    position: relative;
+    display: flex;
+    justify-content: left;
+
+
+
+}
+
+
+
+.drive-detail-info .drive-info-left-card {
+
+    display: inline-block;
+    height: 100%;
+    flex: .5;
+}
+
+.drive-detail-info .drive-info-right-card {
+    min-height: 150px;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    border-left: 2px solid rgba(199, 199, 199, 0.3);
+    flex: .5;
+
+}
+
+.drive-detail-info h3 {
+    color: #424242;
+    text-align: left;
+    font-weight: 600;
+    margin: 0;
+}
+
+.drive-detail-info h2 {
+    color: #424242;
+    text-align: left;
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin: 0;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.drive-detail-info div {
+    font-size: 0.8rem;
+    color: #424242;
+    text-align: left;
+    font-family: 'Poppins';
+}
+
+.drive-detail-info button {
+    align-content: center;
+    width: 10rem;
+    height: 2rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border: 0;
+    background-color: #97ffff;
+    position: absolute;
+    bottom: 1rem;
+    border-radius: 5px;
+    color: #424242;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.drive-detail-info button:hover {
+    background-color: #5ddef4;
+}
+
+.drive-detail-info p {
+    font-size: 0.8rem;
+    color: #424242;
+    margin: 0rem;
+}
+
+.drive-detail-info .last-date {
+    font-size: .75rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.drive-detail-info .requirements {
+    font-size: 0.8rem;
+    color: #424242;
+    margin: 0rem;
+}
