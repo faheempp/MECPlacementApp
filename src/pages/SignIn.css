@@ -41,22 +41,24 @@
 .input-field   {width: 100%;display: inline-block;margin: 2% 5% 2% 0;}
 .input-field label{font-size: 80%;color: grey}
 .input-field input{
-                      display: inline-block;width: 100%;
-                      color:black;
-                      border-top: none;
-                      border-left: none;
-                      border-right: none;
-                      border-bottom: 1px grey solid;
-                      background-color: inherit;
-                      line-height: 200%;
-                      transition-property: border-color;
-                      transition-delay: 0s;
-                      transition-duration: .3s;
-                      float:left;
-                      outline: none;
-                    }
-.input-field input:focus  {border-color: #1b5672}
-.input-field input:hover{border-color: #1b5672;}
+    display: inline-block;width: 100%;
+    color:black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.15rem grey solid;
+    background-color: inherit;
+    line-height: 200%;
+    transition-property: border-color;
+    transition-delay: 0s;
+    transition-duration: .3s;
+    float:left;
+    outline: none;
+}
+.input-field input:focus  {
+    border-color: #009fae;
+    background-color: #f5f5f5;
+} 
 .signin-button-container{
     text-align: center;
     margin: 2% 0 1% 0;
@@ -75,8 +77,8 @@
     font-size: 120%;
     padding: 1% 2% 1% 2%;
     border: none;
-    border-radius: 10px;
-    transition-duration: .3s;
+    border-radius: 5px;
+    transition-duration: 300ms;
     font-weight: 500;
     background-color: #5ddef4;
     color: #ffffff;
@@ -85,7 +87,7 @@
 }
 
 .signin-button:hover {
-    background-color:  #97ffff;
+    background-color:  #54d0e0;
 }
 .formfooter{
     margin: 10px 0 0 0;
