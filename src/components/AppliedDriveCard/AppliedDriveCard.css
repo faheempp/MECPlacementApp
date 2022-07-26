@@ -26,8 +26,8 @@
     height: 2rem;
     font-family: 'Poppins';
     font-weight: 500;
-    border: 0.1rem solid #c7c7c7; 
-    background-color: #ffffff;
+    border: 0; 
+    background-color: #5ddef4;
     position: absolute;
     bottom: 2rem;
     border-radius: 5px; 
@@ -36,7 +36,7 @@
     transition-duration: 300ms;
 }
 .applied-drive-card button:hover{
-    background-color: #5ddef4;
+    background-color: #54d0e0;
     border: 0;
 }
 .applied-drive-card:hover {
@@ -49,6 +49,7 @@
     text-align: left;
     font-weight: 600;
     margin: 0;
+    font-size: 1rem;
 }
 .applied-drive-card h4{
     color: #424242;
@@ -56,7 +57,7 @@
     font-family: 'Poppins';
     font-weight: 400;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
 }
 .applied-drive-card-left{
@@ -78,4 +79,9 @@
 .applied-drive-card-right p{
     font-weight: 600;
     font-size: 0.8rem;
+}
+.applied-drive-card .applied-drive-card-right .applied-drive-current-status{
+    font-weight: 500;
+    font-size: 0.8rem;
+
 }
