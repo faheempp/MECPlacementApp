@@ -10,7 +10,8 @@ export default function Update() {
     <div>
       <div className='admin-page'>
         <AdminHeader/>
-        <EditDriveContainer/>
+        <CreateDrive/>
+        <CreateNews/>
     </div>
     </div>
   )
