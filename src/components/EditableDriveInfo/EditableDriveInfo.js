@@ -17,6 +17,7 @@ export default function EditableDriveInfo(props) {
   
   return (
     <div className='company-form'>
+        <div className='adm-card-heading'>{companyName} Drive</div>
         <form>
             <div className='feature'>
                 <label htmlFor="companyName">Company Name</label>
@@ -30,7 +31,7 @@ export default function EditableDriveInfo(props) {
             </div>
             <div className='feature'>
                 <label htmlFor="brief">Brief</label>
-                <input 
+                <textarea 
                     type="text" 
                     name="brief"
                     id="brief"
@@ -66,7 +67,7 @@ export default function EditableDriveInfo(props) {
             </div>
             <div className='feature'>
                 <label htmlFor="criteria">Criteria</label>
-                <input 
+                <textarea 
                     type="text" 
                     name="criteria"
                     id="criteria"
@@ -75,7 +76,7 @@ export default function EditableDriveInfo(props) {
             </div>
             <div className='feature'>
                 <label htmlFor="remarks">Remarks</label>
-                <input 
+                <textarea 
                     type="text" 
                     name="remarks"
                     id="remarks"
