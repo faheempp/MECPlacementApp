@@ -1,0 +1,41 @@
+.company-form{
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    width: 45%;
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px rgba(199, 199, 199, 0.5) solid;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+.company-form .feature{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.company-form input{
+    margin-left: 0.3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-family: 'Poppins';
+    color: rgb(128, 128, 128);
+    font-size: 0.8rem;
+}
+.company-form input:focus{ 
+    color: #424242;
+}
+.company-form button{
+    background-color: #5ddef4;
+    border: 0;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.company-form button:hover{
+    cursor: pointer;
+    background-color: #54d0e0;
+}

@@ -1,16 +1,13 @@
-.news-card {
+.adm-news-card {
     text-align: left;
-    background-color: #ffffff;
-    border-bottom: 2px solid rgba(199, 199, 199, 1);
+    background-color: #ffffff; 
     padding-top: 0.1rem;
     padding-left: 0.8rem;
     padding-right: 0.8rem;
-    padding-bottom: 0.8rem;
-    transition-property: background-color;
-    transition-duration: 300ms;
+    padding-bottom: 0.8rem; 
+    margin-bottom: 3rem;
 }
-
-.news-card h4 {
+.adm-news-card h4 {
     margin: 0;
     font-family: 'Poppins';
     font-weight: 400;
@@ -19,8 +16,7 @@
     text-decoration-line: underline;
 
 }
-
-.news-card .news-content {
+.adm-news-card .news-content {
     font-family: 'Poppins';
     font-size: 0.75rem;
     font-weight: normal;
@@ -28,6 +24,3 @@
 
 }
 
-.news-card:hover {
-    background-color: #efefef;
-}

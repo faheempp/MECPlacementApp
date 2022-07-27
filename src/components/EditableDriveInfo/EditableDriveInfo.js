@@ -1,4 +1,5 @@
 import React from 'react'
+import './EditableDriveInfo.css'
 
 export default function EditableDriveInfo(props) {
   const companyName=props.companyName;
@@ -15,9 +16,9 @@ export default function EditableDriveInfo(props) {
 
   
   return (
-    <div>
+    <div className='company-form'>
         <form>
-            <div>
+            <div className='feature'>
                 <label htmlFor="companyName">Company Name</label>
                 <input
                     type="text" 
@@ -27,7 +28,7 @@ export default function EditableDriveInfo(props) {
                     
                 />
             </div>
-            <div>
+            <div className='feature'>
                 <label htmlFor="brief">Brief</label>
                 <input 
                     type="text" 
@@ -36,7 +37,7 @@ export default function EditableDriveInfo(props) {
                     value={brief}
                 />
             </div>
-             <div>
+             <div className='feature'>
                 <label htmlFor="post">Post</label>
                 <input 
                     type="text" 
@@ -45,7 +46,7 @@ export default function EditableDriveInfo(props) {
                     value={post}
                 />
             </div>
-            <div>
+            <div className='feature'>
                 <label htmlFor="slot">Slot</label>
                 <input 
                     type="text" 
@@ -54,7 +55,7 @@ export default function EditableDriveInfo(props) {
                     value={slot}
                 />  
             </div>
-            <div>
+            <div className='feature'>
                 <label htmlFor="eligibleBranches">Eligible Branches</label>
                 <input 
                     type="text" 
@@ -63,7 +64,7 @@ export default function EditableDriveInfo(props) {
                     value={eligibleBranches}
                 />
             </div>
-            <div>
+            <div className='feature'>
                 <label htmlFor="criteria">Criteria</label>
                 <input 
                     type="text" 
@@ -72,7 +73,7 @@ export default function EditableDriveInfo(props) {
                     value={criteria}
                 />
             </div>
-            <div>
+            <div className='feature'>
                 <label htmlFor="remarks">Remarks</label>
                 <input 
                     type="text" 
@@ -81,7 +82,7 @@ export default function EditableDriveInfo(props) {
                     value={remarks}
                 />
             </div>
-            <div>
+            <div className='feature'>
                 <label htmlFor="location">Location</label>
                 <input 
                     type="text" 
@@ -90,7 +91,7 @@ export default function EditableDriveInfo(props) {
                     value={location}
                 />
             </div>
-            <div>
+            <div className='feature'>
                 <label htmlFor="pay">Pay</label>
                 <input 
                     type="text" 
@@ -99,8 +100,7 @@ export default function EditableDriveInfo(props) {
                     value={pay}
                 />
             </div>
-            
-            <div>
+            <div className='feature'>
                 <label htmlFor="lastDate">Last Date</label>
                 <input 
                     type="text" 

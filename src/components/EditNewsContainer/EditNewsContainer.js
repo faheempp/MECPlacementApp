@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import AdminNewsCard from '../AdminNewsCard/AdminNewsCard'
+import './EditNewsContainer.css';
 
 import NewsDataService from "../../services/news.services";
 import { doc } from "firebase/firestore";
@@ -18,7 +19,7 @@ export default function EditNewsContainer() {
     }
 
   return (
-    <div>
+    <div className='news-section'>
         <h3>News section</h3>
         <div>
         {news.map((doc,index)=>{
