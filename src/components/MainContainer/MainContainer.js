@@ -20,7 +20,7 @@ export default function MainContainer() {
 
     const getDrives= async ()=>{
         const data= await DriveDataService.getAllDrives();
-        // console.log(data.docs)
+        console.log(data.docs)
         setDrives(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
     }
     const getNews=async ()=>{
