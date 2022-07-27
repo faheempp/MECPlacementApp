@@ -12,7 +12,7 @@ function AdminHeader({active}){
                 {/* <div className="logo">
                     <img src={collegelogo} alt=""></img>
                 </div> */}
-                <h2 className="pctitle">P. C. | Admin</h2>
+                <h2 className="pctitle">P C | Admin</h2>
                 {/* <div className="searchbar">Searchbars</div> */}
             </div>
             <div className="nav">

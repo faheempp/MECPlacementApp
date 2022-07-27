@@ -12,7 +12,7 @@ function Header({active}){
                 {/* <div className="logo">
                     <img src={collegelogo} alt=""></img>
                 </div> */}
-                <h2 className="pctitle">P. Cell</h2>
+                <h2 className="pctitle">Placement Cell</h2>
                 {/* <div className="searchbar">Searchbars</div> */}
             </div>
             <div className="nav">

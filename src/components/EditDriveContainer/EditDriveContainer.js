@@ -30,7 +30,7 @@ export default function EditDriveContainer() {
 
   return (
     <div className='edit-drive-container'>
-        <h3>Edit drive</h3>
+        <h3>Edit Drive Details</h3>
         <div>
             {drives.map((doc,index)=>{
                 return(

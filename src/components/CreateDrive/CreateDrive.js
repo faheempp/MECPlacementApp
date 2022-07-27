@@ -61,7 +61,7 @@ export default function CreateDrive() {
 
   return (
     <div className='create-new-drive'>
-        <h3>Create new drive</h3>
+        <h3>Create New Drive</h3>
         <div className='adm-new-drive'>
                 <form> 
                     <div className='feature'>

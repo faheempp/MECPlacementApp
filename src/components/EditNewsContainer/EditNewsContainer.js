@@ -20,7 +20,7 @@ export default function EditNewsContainer() {
 
   return (
     <div className='news-section'>
-        <h3>News section</h3>
+        <h3>Edit News</h3>
         <div>
         {news.map((doc,index)=>{
                         return(
