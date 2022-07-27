@@ -1,0 +1,11 @@
+.create-page-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.create-page-left{
+    flex: 0.75;
+}
+.create-page-right {
+    flex: .25;
+}

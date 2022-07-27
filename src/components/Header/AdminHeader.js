@@ -19,7 +19,7 @@ function AdminHeader({active}){
 
                 
                 <Link to="/admin" className="nav-item">Update</Link>
-                <Link to="/admin/update" className="nav-item">Create</Link>
+                <Link to="/admin/create" className="nav-item">Create</Link>
                 {/* <Link to="/admin" className="nav-item">Admin</Link> */}
                 {/* <Link to="/application" className="nav-item">Application</Link> */}
                 {/* <Link to="/profile" className="nav-item">Profile</Link> */}

@@ -13,18 +13,19 @@
     font-size: 0.8rem;
     background-color: #ffffff;
     padding: 1rem; 
-    width: 95%;
+    width:93%;
     display: inline-block;
     border-radius: 5px;
     border: 2px rgba(199, 199, 199, 0.5) solid;
     margin-bottom: 1rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    /* margin-right: 0.5rem;
+    margin-left: 0.5rem; */
 } 
 .adm-new-drive .feature{
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 0.3rem;
+    margin-right: 0.3rem;
     display: block; 
 }
 .adm-new-drive .feature label{
@@ -32,7 +33,7 @@
 }
 .adm-new-drive input{ 
     padding-top: 0.3rem;
-    width: 25rem;
+    width: 100%;
     padding-bottom: 0.3rem;
     font-family: 'Poppins';
     color: rgb(128, 128, 128);
@@ -41,7 +42,7 @@
 } 
 .adm-new-drive textarea{
     padding-top: 0.3rem;
-    width: 25rem;
+    width: 100%;
     padding-bottom: 0.3rem;
     font-family: 'Poppins';
     color: rgb(128, 128, 128);

@@ -8,7 +8,7 @@ import Application from './pages/Application';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Admin from './pages/Admin';
-import Update from './pages/Update';
+import Create from './pages/Create';
 import DriveDetail from './pages/DriveDetail'
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/admin' element={<Admin/>} />
           <Route path='/drivedetail/:driveid' element={<DriveDetail/>} />
-          <Route path='admin/update' element={<Update/>}/>
+          <Route path='admin/create' element={<Create/>}/>
         </Routes>
       </div>
     </BrowserRouter>
