@@ -21,7 +21,7 @@ export default function AdminNewsCard(props) {
     <div className='adm-news-card'>
         <h4 className='adm-news-heading'>{newsheading}</h4>
         <div className='adm-news-content'>{newscontent}</div>
-        <div><button>Delete</button></div>  
+        <button className='del-button'>Delete</button>
     </div>
   )
 }
