@@ -18,6 +18,7 @@ export default function DriveDetailPageContainer(props){
   const driveid=props.driveid;
      const getDriveDetail= async ()=>{
         const data= await DriveDataService.getDrive(driveid);
+        // console.log(data);
         const companyName=data._document.data.value.mapValue.fields.companyName.stringValue;
         const brief=data._document.data.value.mapValue.fields.brief.stringValue;
         const criteria=data._document.data.value.mapValue.fields.criteria.stringValue;

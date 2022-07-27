@@ -23,7 +23,7 @@ export default function EditNewsContainer() {
         <div>
         {news.map((doc,index)=>{
                         return(
-                            <AdminNewsCard newsHeading={doc.newsHeading} newsContent={doc.newsContent}/>
+                            <AdminNewsCard newsId={doc.id} newsHeading={doc.newsHeading} newsContent={doc.newsContent}/>
                         )
                     })}
     </div>
