@@ -75,6 +75,7 @@
     transition-duration: 300ms;
 }
 .driveinfo button:hover{
+    cursor: pointer;
     background-color: #54d0e0; 
 }
 .driveinfo p{

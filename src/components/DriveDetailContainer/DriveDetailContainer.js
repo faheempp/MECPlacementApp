@@ -46,21 +46,32 @@ export default function DriveDetailPageContainer(props){
    
   return (
     <div className='drive-detail-page-container'>
-        <h2 className="drive-detail-heading">Drive Details {}</h2>
+        {/* <h2 className="drive-detail-heading">Drive Details {}</h2> */}
         <div className='drive-detail-info'>
             <div className="">            
             <h3 className="company-name"> {companyName}</h3>
-            <div className="compamny-brief">{brief}</div>
-            <h2 className="drive-post-name">Post: {post}</h2>
-            <div className="company-slot">Slot: {slot}</div> 
-            <div className="company-location">Location: {location}</div>
-            <div className='company-eligibleBranches'>{eligibleBranches}</div> 
-            <div className='company-lastdate'>{lastDate}</div> 
-            <div className='company-pay'>{pay}</div> 
-            <div className='company-remarks'>Remarks :{remarks}</div> 
-            <div className="requirements">Criteria: {criteria}</div>
-            <div className=''>Registration: Link Here</div>
-            <div className=''>Website here</div>
+            <h4 className='about company-about'>About</h4>
+            <div className="descrp compamny-brief">{brief}</div>
+            <h4 className='about company-post'>Post</h4>
+            <h2 className=" descrp drive-post-name">{post}</h2>
+            <h4 className='about company-slot'>Slot:</h4>
+            <div className="descrp drive-company-slot">{slot}</div>
+            <h4 className='about company-location'>Location</h4> 
+            <div className="descrp drive-company-location">{location}</div>
+            <h4 className='about company-eligibility'>Eligibility</h4> 
+            <div className='descrp drive-company-eligibleBranches'>{eligibleBranches}</div> 
+            <h4 className='about company-last-date'>Last Date</h4> 
+            <div className='descrp drive-company-lastdate'>{lastDate}</div> 
+            <h4 className='about company-pay'>Pay:</h4> 
+            <div className='descrp drive-company-pay'>{pay}</div>
+            <h4 className='about company-remarks'>Remarks</h4>  
+            <div className='descrp drive-company-remarks'>{remarks}</div> 
+            <h4 className='about company-criteria'>Criteria</h4> 
+            <div className="descrp drive-criteria">{criteria}</div>
+            <h4 className='about company-registration'>Registration Link</h4> 
+            <div className='descrp company-reg-link'>link</div>
+            <h4 className='about company-website'>Company Website</h4> 
+            <div className='descrp drive-company-web'>Website here</div>
             <button>Apply</button>
           </div>
         </div>
