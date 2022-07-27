@@ -1,7 +1,7 @@
-
 import React, { useState,useEffect } from 'react'
 import DriveDataService from "../../services/drive.services"
 import EditableDriveInfo from '../EditableDriveInfo/EditableDriveInfo';
+import './EditDriveContainer.css';
 export default function EditDriveContainer() {
     const [companyName,setCompanyName]=useState('');
     const [brief, setBrief]=useState('');
@@ -29,7 +29,7 @@ export default function EditDriveContainer() {
     
 
   return (
-    <div>
+    <div className='edit-drive-container'>
         <h3>Edit drive</h3>
         <div>
             {drives.map((doc,index)=>{
