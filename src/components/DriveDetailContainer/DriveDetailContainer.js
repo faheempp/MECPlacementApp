@@ -17,18 +17,18 @@ export default function DriveDetailPageContainer(props){
 
   const driveid=props.driveid;
      const getDriveDetail= async ()=>{
-        const data= await DriveDataService.getDrive(driveid);
-        // console.log(data);
-        const companyName=data._document.data.value.mapValue.fields.companyName.stringValue;
-        const brief=data._document.data.value.mapValue.fields.brief.stringValue;
-        const criteria=data._document.data.value.mapValue.fields.criteria.stringValue;
-        const eligibleBranches=data._document.data.value.mapValue.fields.eligibleBranches.stringValue;
-        const lastDate=data._document.data.value.mapValue.fields.lastDate.stringValue;
-        const location=data._document.data.value.mapValue.fields.location.stringValue;
-        const pay=data._document.data.value.mapValue.fields.pay.stringValue;
-        const post=data._document.data.value.mapValue.fields.post.stringValue;
-        const remarks=data._document.data.value.mapValue.fields.remarks.stringValue;
-        const slot=data._document.data.value.mapValue.fields.slot.stringValue;
+        const docSnap= await DriveDataService.getDrive(driveid);
+        console.log(docSnap.data());
+        const companyName=docSnap.data().companyName;
+        const brief=docSnap.data().brief;
+        const criteria=docSnap.data().criteria;
+        const eligibleBranches=docSnap.data().eligibleBranches;
+        const lastDate=docSnap.data().lastDate;
+        const location=docSnap.data().location;
+        const pay=docSnap.data().pay;
+        const post=docSnap.data().post;
+        const remarks=docSnap.data().remarks;
+        const slot=docSnap.data().slot;
         setCompanyName(companyName);
         setBrief(brief);
         setCriteria(criteria);

@@ -24,6 +24,7 @@ class DriveDataService{
 
     getDrive=(id)=>{
         const driveDoc=doc(db,"drives",id);
+        console.log(driveDoc)
         return getDoc(driveDoc);
     }
 }

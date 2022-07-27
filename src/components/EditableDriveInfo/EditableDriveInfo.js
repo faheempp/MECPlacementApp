@@ -1,19 +1,41 @@
-import React from 'react'
+import React,{useState} from 'react'
+import DriveDataService from "../../services/drive.services"
 
 export default function EditableDriveInfo(props) {
-  const companyName=props.companyName;
-  const slot=props.slot;
-  const post=props.post;
-  const brief=props.brief;
-  const eligibleBranches=props.eligibleBranches;
-  const location=props.location;
-  const lastDate=props.lastDate;
-  const criteria=props.criteria;
-  const pay=props.pay;
-  const remarks=props.remarks
+  const [companyName,setCompanyName]=useState(props.companyName);
+  const [slot,setSlot]=useState(props.slot);
+  const [post,setPost]=useState(props.post);
+  const [brief,setBrief]=useState(props.brief);
+  const [eligibleBranches,setEligibleBranches]=useState(props.eligibleBranches);
+  const [location,setLocation]=useState(props.location);
+  const [lastDate,setLastDate]=useState(props.lastDate);
+  const [criteria,setCriteria]=useState(props.criteria);
+  const [pay,setPay]=useState(props.pay);
+  const [remarks,setRemarks]=useState(props.remarks);
   const id=props.id;
-
   
+  const [message,setMessage]=useState({error:false,msg:""});
+  const updateHandle=async(e)=>{
+    const updatedDrive={
+            companyName,
+            brief,
+            eligibleBranches,
+            criteria,
+            location,
+            pay,
+            slot,
+            post,
+            lastDate,
+            remarks
+        }
+        try{
+            await DriveDataService.updateDrive(id,updatedDrive);
+            setMessage({error:false,msg:"drive updated"});
+        }
+        catch(err){
+            setMessage({error:true,msg:err.message});
+        }
+  }
   return (
     <div>
         <form>
@@ -24,7 +46,7 @@ export default function EditableDriveInfo(props) {
                     name="companyName"
                     id="companyName"
                     value={companyName}
-                    
+                    onChange={(e)=>setCompanyName(e.target.value)}
                 />
             </div>
             <div>
@@ -34,6 +56,7 @@ export default function EditableDriveInfo(props) {
                     name="brief"
                     id="brief"
                     value={brief}
+                    onChange={(e)=>setBrief(e.target.value)}
                 />
             </div>
              <div>
@@ -43,6 +66,7 @@ export default function EditableDriveInfo(props) {
                     name="post"
                     id="post"
                     value={post}
+                    onChange={(e)=>setPost(e.target.value)}
                 />
             </div>
             <div>
@@ -52,6 +76,7 @@ export default function EditableDriveInfo(props) {
                     name="slot"
                     id="slot"
                     value={slot}
+                    onChange={(e)=>setSlot(e.target.value)}
                 />  
             </div>
             <div>
@@ -61,6 +86,7 @@ export default function EditableDriveInfo(props) {
                     name="eligibleBranches"
                     id="eligibleBranches"
                     value={eligibleBranches}
+                    onChange={(e)=>setEligibleBranches(e.target.value)}
                 />
             </div>
             <div>
@@ -70,6 +96,7 @@ export default function EditableDriveInfo(props) {
                     name="criteria"
                     id="criteria"
                     value={criteria}
+                    onChange={(e)=>setCriteria(e.target.value)}
                 />
             </div>
             <div>
@@ -79,6 +106,7 @@ export default function EditableDriveInfo(props) {
                     name="remarks"
                     id="remarks"
                     value={remarks}
+                    onChange={(e)=>setRemarks(e.target.value)}
                 />
             </div>
             <div>
@@ -88,6 +116,7 @@ export default function EditableDriveInfo(props) {
                     name="location"
                     id="location"
                     value={location}
+                    onChange={(e)=>setLocation(e.target.value)}
                 />
             </div>
             <div>
@@ -97,6 +126,7 @@ export default function EditableDriveInfo(props) {
                     name="pay"
                     id="pay"
                     value={pay}
+                    onChange={(e)=>setPay(e.target.value)}
                 />
             </div>
             
@@ -107,10 +137,11 @@ export default function EditableDriveInfo(props) {
                     name="lastDate"
                     id="lastDate"
                     value={lastDate}
+                    onChange={(e)=>setLastDate(e.target.value)}
                 />
             </div>            
             <div>
-                <button>Update drive</button>
+                <button onClick={updateHandle}>Update drive</button>
             </div>
         </form>
         </div>
