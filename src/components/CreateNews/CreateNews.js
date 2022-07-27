@@ -1,7 +1,6 @@
-
-
 import React, { useState } from 'react'
 import NewsDataService from '../../services/news.services';
+import './CreateNews.css'
 
 export default function CreateNews() {
     const [newsHeading,setNewsHeading]=useState('');
@@ -38,35 +37,37 @@ export default function CreateNews() {
     }
 
   return (
-    <div>
+    <div className='create-news'>
         <h3>Add News</h3>
-        <form>
-            <div>
-                <label htmlFor="newsHeading">News Heading</label>
-                <input 
-                    type="text" 
-                    name="newsHeading"
-                    id="newsHeadinge"
-                    value={newsHeading}
-                    onChange={(e)=>setNewsHeading(e.target.value)}
-                />
-            </div>
-            <div>
-                <label htmlFor="newsContent">News Content</label>
-                <input 
-                    type="text" 
-                    name="newsContent"
-                    id="newsContent"
-                    value={newsContent}
-                    onChange={(e)=>setNewsContent(e.target.value)}
-                />
-            </div>
-            
-            
-            <div>
-                <button onClick={onSubmitHandle}>Add News</button>
-            </div>
-        </form>
+        <div className='adm-create-news'>
+            <form>
+                <div className='feature'>
+                    <label htmlFor="newsHeading">News Heading</label>
+                    <input 
+                        type="text" 
+                        name="newsHeading"
+                        id="newsHeadinge"
+                        value={newsHeading}
+                        onChange={(e)=>setNewsHeading(e.target.value)}
+                    />
+                </div>
+                <div className='feature'>
+                    <label htmlFor="newsContent">News Content</label>
+                    <textarea 
+                        type="text" 
+                        name="newsContent"
+                        id="newsContent"
+                        value={newsContent}
+                        onChange={(e)=>setNewsContent(e.target.value)}
+                    />
+                </div>
+                
+                
+                <div>
+                    <button onClick={onSubmitHandle}>Add News</button>
+                </div>
+            </form>
+        </div>
     </div>
   )
 }

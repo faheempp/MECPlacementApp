@@ -1,64 +1,58 @@
-.create-new-drive{
-    padding-left: 4rem;
-    padding-right: 4rem;
-}
-
-.create-new-drive h3{
-    font-family: 'Poppins';
-    font-size: 1.3rem;
-    border-bottom: 2px #00acc1 solid;
-}
-.adm-new-drive{
+.company-form{
     font-family: 'Poppins';
     font-size: 0.8rem;
     background-color: #ffffff;
-    padding: 1rem; 
-    width: 95%;
+    padding: 1rem;
+    width: 45%;
     display: inline-block;
     border-radius: 5px;
     border: 2px rgba(199, 199, 199, 0.5) solid;
     margin-bottom: 1rem;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-} 
-.adm-new-drive .feature{
+}
+.company-form .adm-card-heading{
+    background-color: #54d0e0;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.company-form .feature{
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 0.3rem;
-    display: block; 
 }
-.adm-new-drive .feature label{
+.company-form label{
     font-size: 0.7rem;
 }
-.adm-new-drive input{ 
+.company-form input{
     padding-top: 0.3rem;
-    width: 25rem;
+    width: 98%;
     padding-bottom: 0.3rem;
     font-family: 'Poppins';
     color: rgb(128, 128, 128);
     font-size: 0.8rem;
-    display: block; 
-} 
-.adm-new-drive textarea{
+    display: block;
+}
+.company-form input:focus{ 
+    color: #424242;
+}
+.company-form textarea{
     padding-top: 0.3rem;
-    width: 25rem;
+    width: 98%;
     padding-bottom: 0.3rem;
     font-family: 'Poppins';
     color: rgb(128, 128, 128);
     font-size: 0.8rem;
+    display: block;
     height: 4rem;
-    display: block; 
 }
-.adm-new-drive textarea:focus{
-    color: #424242;
-}  
-.adm-new-drive input:focus{
+.company-form textarea:focus{ 
     color: #424242;
 }
-.adm-new-drive button{
+.company-form button{
     background-color: #5ddef4;
     border: 0;
-    margin-left: 0.3rem;
     height: 2rem;
     width: 10rem;
     border-radius: 5px;
@@ -67,7 +61,7 @@
     transition-duration: 300ms;
     margin-top: 3rem;
 }
-.adm-new-drive button:hover{
+.company-form button:hover{
     cursor: pointer;
     background-color: #54d0e0;
 }

@@ -7,7 +7,7 @@ export default function ProfilePageContainer(){
         <h2 className="profile-heading">Profile</h2>
         <div className='profile-info-container'>
           <div className='img1'>
-            <img src={louisimg}></img>
+            <img src={ localStorage.getItem("Photo") } />
           </div>
 
           <div className='con1'>
@@ -18,7 +18,7 @@ export default function ProfilePageContainer(){
               Name
             </div>
             <div className='profile-info-item-data'>
-              Louis Emmanuel Thomas
+              {localStorage.getItem("Name")}
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function ProfilePageContainer(){
               Email
             </div>
             <div className='profile-info-item-data'>
-              emmanuel.mec@gmail.com
+              { localStorage.getItem("Email")}
             </div>
           </div>
 

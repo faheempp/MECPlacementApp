@@ -1,14 +1,13 @@
-.create-new-drive{
+.create-news{
     padding-left: 4rem;
     padding-right: 4rem;
 }
-
-.create-new-drive h3{
+.create-news h3{
     font-family: 'Poppins';
     font-size: 1.3rem;
     border-bottom: 2px #00acc1 solid;
 }
-.adm-new-drive{
+.adm-create-news{
     font-family: 'Poppins';
     font-size: 0.8rem;
     background-color: #ffffff;
@@ -20,26 +19,26 @@
     margin-bottom: 1rem;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-} 
-.adm-new-drive .feature{
+}
+.adm-create-news .feature{
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 0.3rem;
-    display: block; 
+    display: block;
 }
-.adm-new-drive .feature label{
+.adm-create-news .feature label{
     font-size: 0.7rem;
 }
-.adm-new-drive input{ 
+.adm-create-news input{
     padding-top: 0.3rem;
     width: 25rem;
     padding-bottom: 0.3rem;
     font-family: 'Poppins';
     color: rgb(128, 128, 128);
     font-size: 0.8rem;
-    display: block; 
-} 
-.adm-new-drive textarea{
+    display: block;
+}
+.adm-create-news textarea{
     padding-top: 0.3rem;
     width: 25rem;
     padding-bottom: 0.3rem;
@@ -47,15 +46,15 @@
     color: rgb(128, 128, 128);
     font-size: 0.8rem;
     height: 4rem;
-    display: block; 
+    display: block;
 }
-.adm-new-drive textarea:focus{
-    color: #424242;
-}  
-.adm-new-drive input:focus{
+.adm-create-news textarea:focus{
     color: #424242;
 }
-.adm-new-drive button{
+.adm-create-news label:focus{
+    color: #424242;
+}
+.adm-create-news button{
     background-color: #5ddef4;
     border: 0;
     margin-left: 0.3rem;
@@ -67,7 +66,7 @@
     transition-duration: 300ms;
     margin-top: 3rem;
 }
-.adm-new-drive button:hover{
+.adm-create-news button:hover{
     cursor: pointer;
     background-color: #54d0e0;
 }

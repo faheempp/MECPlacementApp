@@ -71,6 +71,7 @@
     bottom: 1rem;
     border-radius: 5px; 
     color: #424242;
+    font-family: 'Poppins';
     transition-property: background-color;
     transition-duration: 300ms;
 }

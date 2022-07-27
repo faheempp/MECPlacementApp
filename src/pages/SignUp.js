@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import './SignIn.css'
+import  { SignInWithGoogle } from '../firebase-config'
 export class SignUp extends Component {
   state={
         email:'',
@@ -47,7 +48,7 @@ export class SignUp extends Component {
                 <input type="password" id="password"  onChange={this.handleChange}></input>
             </div>
             <div className='input-field signin-button-container'>
-                <button className='signin-button'>Sign Up</button>
+                <button className='signin-button' onClick={ SignInWithGoogle }>Sign Up</button>
             </div>
         </form>
         <div className='formfooter' >Already have an account? <Link to="/signin" className="">Sign In</Link></div>

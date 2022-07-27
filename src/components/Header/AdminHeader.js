@@ -18,8 +18,8 @@ function AdminHeader({active}){
             <div className="nav">
 
                 
-                <Link to="/admin" className="nav-item">Home</Link>
-                <Link to="/admin/update" className="nav-item">Update</Link>
+                <Link to="/admin" className="nav-item">Update</Link>
+                <Link to="/admin/update" className="nav-item">Create</Link>
                 {/* <Link to="/admin" className="nav-item">Admin</Link> */}
                 {/* <Link to="/application" className="nav-item">Application</Link> */}
                 {/* <Link to="/profile" className="nav-item">Profile</Link> */}
