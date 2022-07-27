@@ -15,7 +15,7 @@ export default function EditableDriveInfo(props) {
   const [criteria,setCriteria]=useState(props.criteria);
   const [pay,setPay]=useState(props.pay);
   const [remarks,setRemarks]=useState(props.remarks);
-  const id=props.id;
+  const driveId=props.id;
   
   const [message,setMessage]=useState({error:false,msg:""});
   const updateHandle=async(e)=>{
@@ -32,12 +32,24 @@ export default function EditableDriveInfo(props) {
             remarks
         }
         try{
-            await DriveDataService.updateDrive(id,updatedDrive);
+            await DriveDataService.updateDrive(driveId,updatedDrive);
             setMessage({error:false,msg:"drive updated"});
         }
         catch(err){
             setMessage({error:true,msg:err.message});
         }
+  }
+  const deleteHandle=async()=>{
+    
+    try{
+            await DriveDataService.deleteDrive(driveId);
+            setMessage({error:false,msg:"Drive Deleted"});
+            console.log(driveId);
+        }
+        catch(err){
+            setMessage({error:true,msg:err.message});
+        }
+
   }
   return (
     <div className='company-form'>
@@ -144,8 +156,10 @@ export default function EditableDriveInfo(props) {
                 />
             </div>            
             <div>
-                <button onClick={updateHandle}>Update drive</button>
+                <button onClick={updateHandle}>Update</button>
+                <button onClick={deleteHandle}>Delete</button>
             </div>
+            
         </form>
         </div>
   )
