@@ -4,9 +4,11 @@
     font-family: 'Poppins'; 
     padding: 1rem; 
     margin-bottom: 3rem;
+    border: 2px rgba(199, 199, 199, 0.5) solid;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     width: 45%;
+    display: inline-block;
 }
 .adm-news-card h4 {
     margin: 0;

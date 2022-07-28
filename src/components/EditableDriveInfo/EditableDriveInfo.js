@@ -156,8 +156,8 @@ export default function EditableDriveInfo(props) {
                 />
             </div>            
             <div>
-                <button onClick={updateHandle}>Update</button>
-                <button onClick={deleteHandle}>Delete</button>
+                <button className='update-button' onClick={updateHandle}>Update</button>
+                <button className='delete-button' onClick={deleteHandle}>Delete</button>
             </div>
             
         </form>

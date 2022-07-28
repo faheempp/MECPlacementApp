@@ -1,4 +1,4 @@
-.adm-news-card{ 
+.news-card{ 
     text-align: left;
     background-color: #ffffff;  
     border-bottom: 2px solid rgba(199, 199, 199, 1); 
@@ -6,12 +6,8 @@
     transition-duration: 300ms;
     background-color: #ffffff;
     padding: 1rem;
-    display: inline-block;
-    width: 45%;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    border-radius: 5px;
-    border: 2px rgba(199, 199, 199, 0.5) solid;
+    width: 90%;
+    display: inline-block;   
 }
 .news-card h4{
     margin: 0;
@@ -19,13 +15,13 @@
     font-weight: 400;
     margin-top: 0.5rem; 
     color: #00acc1; 
+    font-size: 1rem;
     text-decoration-line: underline;
-    margin-bottom: 1rem;
-    
+    margin-bottom: 0.4rem;
 }
 .news-card .news-content{
     font-family: 'Poppins';
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: normal;
     color: #424242;
     padding-bottom: 0.3rem;
