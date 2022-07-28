@@ -1,7 +1,7 @@
 # College Placement Cell Website
 
 A Placement website to publish upcoming placement drives and help track your applications. Implemented using 
-[React](https://reactjs.org/) for front-end and [Django](https://www.djangoproject.com/) for back-end.
+[React](https://reactjs.org/) for front-end and [Firebase](https://firebase.google.com/) for back-end.
 https://faheempp.github.io/MECPlacementApp/
 ## About
 
