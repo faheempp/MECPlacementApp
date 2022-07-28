@@ -12,7 +12,7 @@
     margin-left: 0.5rem;
 }
 .company-form .adm-card-heading{
-    background-color: #54d0e0;
+    background-color: #5ddef4;
     padding: 1rem;
     border-radius: 5px;
     font-size: 1rem;
@@ -50,7 +50,7 @@
 .company-form textarea:focus{ 
     color: #424242;
 }
-.company-form button{
+.company-form .update-button{
     background-color: #5ddef4;
     border: 0;
     height: 2rem;
@@ -61,7 +61,23 @@
     transition-duration: 300ms;
     margin-top: 3rem;
 }
-.company-form button:hover{
+.company-form .update-button:hover{
     cursor: pointer;
     background-color: #54d0e0;
+}
+.company-form .delete-button{ 
+    float: right;  
+    border: 0;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    transition-property: background-color;
+    transition-duration: 300ms;
+    margin-top: 3rem;
+    background-color: #ff867c;
+}
+.company-form .delete-button:hover{
+    cursor: pointer;
+    background-color: #ff6659;
 }
