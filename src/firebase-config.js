@@ -27,22 +27,5 @@ const db = getFirestore(app);
 // User authentication with google
 
 export const auth = getAuth(app);
-export const provider= new GoogleAuthProvider()
-export const SignInWithGoogle=()=>
-  {
-   signInWithPopup(auth, provider).then ((result)=> {
-    const name=result.user.displayName;
-    const email=result.user.email;
-    const photo=result.user.photoURL;
 
-    localStorage.setItem("Name", name)
-    localStorage.setItem("Email", email)
-    localStorage.setItem("Photo", photo)
-
-    console.log(result)
-
-   }).catch((error) =>{
-     console.log(error);
-   })
- }
 export { db, app }
