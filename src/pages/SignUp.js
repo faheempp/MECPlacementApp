@@ -22,6 +22,7 @@ const Signup=()=> {
     } catch (err) {
       setError(err.message);
     }
+  }
 /*<<<<<<< HEAD
     const handleConfPasswordClick = () => {
         setConfPasswordEye(!conf_passwordEye)
