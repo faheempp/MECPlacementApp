@@ -1,19 +1,28 @@
-import React, {useState } from 'react'
-import {AiFillEyeInvisible, AiFillEye} from 'react-icons/ai'
-import { Link } from 'react-router-dom'; 
+import React, { Component, useState } from 'react'
+import { Link,useNavigate } from 'react-router-dom';
+import Header from '../components/Header/Header';
 import './SignIn.css'
-import  { SignInWithGoogle } from '../firebase-config' 
+import { useUserAuth } from '../context/UserAuthContext';
+import { Form, Alert,Button } from "react-bootstrap";
+import ProfilePageContainer from '../components/ProfilePageContainer/ProfilePageContainer'
 
-export default function SignUp(){ 
-    //handle password eye
-    const [passwordEye, setPasswordEye]=useState(false);
-    const [conf_passwordEye, setConfPasswordEye]=useState(false);
-    const [email, setEmail]=useState('');
-    const [password, setPassword]=useState('');
+const Signup=()=> {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [password, setPassword] = useState("");
+  const { signUp } = useUserAuth();
+  let navigate=useNavigate();
 
-    const handlePasswordClick = () => {
-        setPasswordEye(!passwordEye)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signUp(email, password);
+      navigate("/profile");
+    } catch (err) {
+      setError(err.message);
     }
+/*<<<<<<< HEAD
     const handleConfPasswordClick = () => {
         setConfPasswordEye(!conf_passwordEye)
     }  
@@ -77,6 +86,40 @@ export default function SignUp(){
         </form>
         <div className='formfooter' >Already have an account? <Link to="/signin" className="">Sign In</Link></div>
         </div>
+=======
+  };*/
+  return (
+    <>
+    <div className="p-4 box">
+      <h2 className="mb-3">New User Sign Up</h2>
+      <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Control
+              type="email"
+              placeholder="Email address"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+          <div className="d-grid gap-2">
+          <Button variant="primary" type="Submit">
+              Login
+            </Button>
+          </div>
+        </Form>
+        
+    </div>
+    <div className="p-4 box mt-3 text-center">
+        Already have an account? <Link to="/SignIn">Login</Link>
       </div>
-    )
+    </>
+  )
 }
+
+export default Signup;
