@@ -27,6 +27,20 @@ export default function SignUp(){
         e.preventDefault();
         console.log(password);
     } 
+    const checkPasswords=(e)=>{
+        if(document.getElementById('password').value === document.getElementById('conf-password').value){
+            document.getElementById('passwords-not-same-error').className='hidden-error';
+            document.getElementById('password').classList.remove('error-input')
+            document.getElementById('conf-password').classList.remove('error-input')
+            SignInWithGoogle();
+        }
+        else{
+            e.preventDefault();
+            document.getElementById('passwords-not-same-error').className='visible-error'; 
+            document.getElementById('password').className='error-input';
+            document.getElementById('conf-password').classList.add('error-input');
+        }
+    }
     return (
       <div className='signin-page-container'>
         <div className='title-section'>
@@ -52,10 +66,13 @@ export default function SignUp(){
                     {
                         (conf_passwordEye === false)? <AiFillEyeInvisible className='visibility-icon' onClick={handleConfPasswordClick}/>:
                         <AiFillEye className='visibility-icon' onClick={handleConfPasswordClick}/>
-                    }  
+                    } 
+                <div id='passwords-not-same-error' className='hidden-error'>
+                    <p>ERROR: passwords must match</p>    
+                </div> 
             </div>
             <div className='input-field signin-button-container'>
-                <button className='signin-button' onClick={ handleSubmit }>Sign Up</button>
+                <button className='signin-button' onClick={ checkPasswords }>Sign Up</button>
             </div>
         </form>
         <div className='formfooter' >Already have an account? <Link to="/signin" className="">Sign In</Link></div>
