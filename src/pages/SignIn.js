@@ -6,12 +6,13 @@ import './SignIn.css';
 import { useUserAuth } from '../context/UserAuthContext';
 import { Form, Alert,Button } from "react-bootstrap";
 
+
 export default function Signin(){
   const [passwordEye, setPasswordEye]=useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
-  const { logIn } = useUserAuth();
+  const { logIn,signinwithg } = useUserAuth();
   let navigate=useNavigate();
   
   const handlePasswordClick = () => {
@@ -27,6 +28,20 @@ export default function Signin(){
       setError(err.message);
     }
   };
+
+  const HandleGoogleAuth=async(e) => {  
+    e.preventDefault();
+    setError("");
+    try {
+    await signinwithg();
+    navigate('/application');
+  }catch (err) {
+    setError(err.message);
+  }
+};
+
+
+
 
   
     const handleChangeEmail=(e)=>{
@@ -75,6 +90,9 @@ export default function Signin(){
             <div className='input-field signin-button-container'>
                 <button className='signin-button' type = "Submit">Sign In</button>
             </div>
+            <div className='input-field signin-button-container'>
+            <button className='signin-button' type = "Submit" onClick={HandleGoogleAuth}>Sign In With Google</button>
+                </div>
         </form>
         <div className='formfooter' >Don't have an account? <Link to="/signup" className="">Sign Up</Link></div>
         </div>
