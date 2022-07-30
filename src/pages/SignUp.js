@@ -23,7 +23,7 @@ export default function Signup(){
     setError("");
     try {
       await signUp(email, password);
-      navigate("/");
+      navigate("/profile");
     } catch (err) {
       setError(err.message);
     }
