@@ -19,17 +19,6 @@ export default function Signup(){
   const [passwordEye, setPasswordEye]=useState(false);
   const [conf_passwordEye, setConfPasswordEye]=useState(false);
   
-  /*const HandleProfileUpdate=async(e) => {  
-    e.preventDefault();
-    setError("");
-    console.log(user.email);
-    try {  
-    await createUserDocument(user)
-    navigate('/application');
-  }catch (err) {
-    setError(err.message);
-  }
-}*/
 
   const handleSubmit=async(e)=>{
     e.preventDefault();

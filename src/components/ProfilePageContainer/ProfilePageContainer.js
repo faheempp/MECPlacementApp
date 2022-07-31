@@ -1,9 +1,11 @@
 import React,{useState} from 'react'
-import {auth, createUserDocument} from '../../firebase-config'
+import {auth, createUserDocument,db} from '../../firebase-config'
 import louisimg from '../../images/lous.png'
 // import './ProfilePageContainer.css';
 import {useUserAuth} from "../../context/UserAuthContext"
 import { useNavigate } from 'react-router-dom'; 
+import { doc, updateDoc } from "firebase/firestore";
+
 
 
 export default function ProfilePageContainer(){
@@ -25,17 +27,26 @@ export default function ProfilePageContainer(){
   const [error, setError] = useState("");
   let navigate=useNavigate();
 
-  /*const HandleProfileUpdate=async(e) => {  
+  const HandleProfileUpdate=async(e) => {  
     e.preventDefault();
     setError("");
-   
+    const userRef=doc(db,"users",user.uid)
     try {  
-    await createUserDocument(user)
+    await updateDoc(userRef,{
+      Name:studentName,
+      Branch:branch,
+      CGPA:cgpa,
+      Github:githubLink,
+      Portfolio:portfolioLink,
+      Semester:semester
+
+
+    })
     navigate('/application');
   }catch (err) {
     setError(err.message);
   }
-}*/
+}
 return (
     <div className='profile-page-container'>
         <h2 className="profile-heading">Profile</h2>
@@ -144,22 +155,14 @@ return (
                 value={phone}
                 onChange={(e)=>setPhone(e.target.value)}/>
             </div>
-            <div>
-              <label HTMLfor='email' className='profile-info-item' >Phone</label>
-              <input className='profile-info-item-name'
-                type="text"
-                name="email"
-                id="email"
-                value={email}
-                onChange={(e)=>setPhone(e.target.value)}/>
-            </div>
+            
             <div>
               <label HTMLfor='phoneLink' className='profile-info-item' >Email</label>
               <input className='profile-info-item-name'
                 type="text"
-                name="phone"
-                id="phone"
-                value={phone}
+                name="email"
+                id="email"
+                value={user.email}
                 onChange={(e)=>setEmail(e.target.value)}/>
             </div>
             <div>
@@ -178,7 +181,7 @@ return (
           </div>
 
           <div className='save-profile-button'>
-            <button>
+            <button onClick={HandleProfileUpdate}>
               Save
             </button>
           </div>

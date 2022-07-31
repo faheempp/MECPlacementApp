@@ -50,6 +50,7 @@ export const createUserDocument = async(user) =>
                 Portfolio:"test",
                 Resume:"test",
                 Semester:1,
+                
               });
 }
 
