@@ -1,8 +1,7 @@
 import React from "react";
 import './Header.css';
 
-import { Link } from 'react-router-dom'
-import  collegelogo from'../../images/collegelogo.png';
+import { Link } from 'react-router-dom' 
 
 
 function Header({active}){

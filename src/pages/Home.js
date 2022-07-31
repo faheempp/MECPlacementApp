@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header/Header';
 import MainContainer from '../components/MainContainer/MainContainer';
+import Footer from '../components/Footer/Footer';
 import { useUserAuth } from '../context/UserAuthContext';
 import { Link,useNavigate } from 'react-router-dom';
 import {Button} from 'react-bootstrap'
@@ -26,6 +27,7 @@ export default function Home() {
         <button className='signin-button' onClick={ HandleLogout } style ={{ width: 120 }}>LogOut</button>
         </div>
         <MainContainer/>
+        <Footer/>
     </div>
   )
 }
