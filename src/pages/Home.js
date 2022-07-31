@@ -24,7 +24,7 @@ export default function Home() {
     <div>
         <Header/>
         <div className='input-field signin-button-container'>
-        <button className='signin-button' onClick={ HandleLogout } style ={{ width: 120 }}>LogOut</button>
+        {/* <button className='signin-button' onClick={ HandleLogout } style ={{ width: 120 }}>LogOut</button> */}
         </div>
         <MainContainer/>
         <Footer/>
