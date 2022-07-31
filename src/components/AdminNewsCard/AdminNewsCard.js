@@ -16,7 +16,8 @@ export default function AdminNewsCard(props) {
             await NewsDataService.deleteNews(newsId); 
             window.location.reload()
             setMessage({error:false,msg:"News(Id:${newsId}) Deleted"});
-            window.alert(message);
+            // window.alert(toString(message));
+            window.alert("Succesfully deleted item.");
         }
         catch(err){
             setMessage({error:true,msg:err.message});
