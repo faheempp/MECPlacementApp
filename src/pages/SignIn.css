@@ -48,7 +48,8 @@
 }
 .input-field label{font-size: 80%;color: grey}
 .input-field input{
-    display: inline-block;width: 100%;
+    display: inline-block;
+    width: 100%;
     color:#424242;
     font-family: 'Poppins';
     font-size: 80%;

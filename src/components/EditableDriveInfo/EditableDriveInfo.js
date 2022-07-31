@@ -2,10 +2,11 @@
 import React,{useState} from 'react'
 import DriveDataService from "../../services/drive.services"
 import './EditableDriveInfo.css'
+import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai'
 
 
 export default function EditableDriveInfo(props) {
-    const [isOpen,setIsOpen]=useState(false);
+  const [isOpen,setIsOpen]=useState(false);
 
   const [companyName,setCompanyName]=useState(props.companyName);
   const [slot,setSlot]=useState(props.slot);
@@ -55,7 +56,10 @@ export default function EditableDriveInfo(props) {
   }
   return (
     <div className='company-form'>
-        <div ><button className='adm-card-heading' onClick={()=>setIsOpen(!isOpen)}>{companyName} Drive</button> </div>
+        <div className='adm-news-container'><button className='adm-card-heading' onClick={()=>setIsOpen(!isOpen)}>{companyName} Drive</button>
+        <div className='drop-icons' onClick={()=>setIsOpen(!isOpen)}>
+            {!isOpen?<AiFillCaretDown/>:<AiFillCaretUp/>}
+        </div></div>
         {isOpen && <form>
             <div className='feature'>
                 <label htmlFor="companyName">Company Name</label>
@@ -161,7 +165,6 @@ export default function EditableDriveInfo(props) {
                 <button className='update-button' onClick={updateHandle}>Update</button>
                 <button className='delete-button' onClick={deleteHandle}>Delete</button>
             </div>
-            
         </form>}
         </div>
   )
