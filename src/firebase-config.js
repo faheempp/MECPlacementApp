@@ -37,12 +37,12 @@ export const createUserDocument = async(user) =>
     return;
   }
   const ref=user.uid
-  console.log(ref)
+  console.log("lalalsa")
 
 
       await setDoc(doc(db, "users", ref ),{
         
-                Branch:"test",
+                Branch:"testfin",
                 CGPA:0,
                 Email: user.email,
                 Github:"test",

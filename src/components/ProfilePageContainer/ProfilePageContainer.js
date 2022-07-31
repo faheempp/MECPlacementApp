@@ -25,19 +25,17 @@ export default function ProfilePageContainer(){
   const [error, setError] = useState("");
   let navigate=useNavigate();
 
-  const HandleProfileUpdate=async(e) => {  
+  /*const HandleProfileUpdate=async(e) => {  
     e.preventDefault();
     setError("");
    
-    try {
-      
+    try {  
     await createUserDocument(user)
-   
     navigate('/application');
   }catch (err) {
     setError(err.message);
   }
-}
+}*/
 return (
     <div className='profile-page-container'>
         <h2 className="profile-heading">Profile</h2>
