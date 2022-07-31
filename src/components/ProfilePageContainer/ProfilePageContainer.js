@@ -1,10 +1,36 @@
 import React from 'react'
+import {auth, createUserDocument} from '../../firebase-config'
 import louisimg from '../../images/lous.png'
 import './ProfilePageContainer.css';
+import {useUserAuth} from "../../context/UserAuthContext"
+import  { Component, useState } from 'react'
+import { useNavigate } from 'react-router-dom'; 
+
+
 export default function ProfilePageContainer(){
+  const { user }=useUserAuth()
+  const [error, setError] = useState("");
+  let navigate=useNavigate();
+
+  const HandleProfileUpdate=async(e) => {  
+    e.preventDefault();
+    setError("");
+   
+    try {
+      
+    await createUserDocument(user)
+   
+    navigate('/application');
+  }catch (err) {
+    setError(err.message);
+  }
+}
+
+
   return (
     <div className='profile-page-container'>
         <h2 className="profile-heading">Profile</h2>
+       
         <div className='profile-info-container'>
           <div className='img1'>
             <img src={ localStorage.getItem("Photo") } />
@@ -18,7 +44,7 @@ export default function ProfilePageContainer(){
               Name
             </div>
             <div className='profile-info-item-data'>
-              {localStorage.getItem("Name")}Louis
+             Louis
             </div>
           </div>
 
@@ -55,7 +81,7 @@ export default function ProfilePageContainer(){
               Email
             </div>
             <div className='profile-info-item-data'>
-              { localStorage.getItem("Email")}
+             
             </div>
           </div>
 
@@ -104,7 +130,7 @@ export default function ProfilePageContainer(){
             </div>
           </div>
           <div className='update-profile-button'>
-            <button>
+            <button onClick={HandleProfileUpdate}>
               Update Profile
             </button>
           </div>
