@@ -18,7 +18,7 @@ export default function ProfilePageContainer(){
               Name
             </div>
             <div className='profile-info-item-data'>
-              {localStorage.getItem("Name")}
+              {localStorage.getItem("Name")}Louis
             </div>
           </div>
 

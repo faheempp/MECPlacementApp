@@ -1,0 +1,14 @@
+.update-page-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.update-page-left{
+    flex: .75;
+    /* background-color: red; */
+}
+.update-page-right {
+    flex: .25;
+    /* background-color: green; */
+}

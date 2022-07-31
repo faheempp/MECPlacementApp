@@ -5,6 +5,8 @@ import './EditableDriveInfo.css'
 
 
 export default function EditableDriveInfo(props) {
+    const [isOpen,setIsOpen]=useState(false);
+
   const [companyName,setCompanyName]=useState(props.companyName);
   const [slot,setSlot]=useState(props.slot);
   const [post,setPost]=useState(props.post);
@@ -53,8 +55,8 @@ export default function EditableDriveInfo(props) {
   }
   return (
     <div className='company-form'>
-        <div className='adm-card-heading'>{companyName} Drive</div>
-        <form>
+        <div ><button className='adm-card-heading' onClick={()=>setIsOpen(!isOpen)}>{companyName} Drive</button> </div>
+        {isOpen && <form>
             <div className='feature'>
                 <label htmlFor="companyName">Company Name</label>
                 <input
@@ -160,7 +162,7 @@ export default function EditableDriveInfo(props) {
                 <button className='delete-button' onClick={deleteHandle}>Delete</button>
             </div>
             
-        </form>
+        </form>}
         </div>
   )
 }

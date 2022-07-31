@@ -1,8 +1,7 @@
 import React from 'react'
 import CreateDrive from '../components/CreateDrive/CreateDrive';
 import CreateNews from '../components/CreateNews/CreateNews';
-import EditDriveContainer from '../components/EditDriveContainer/EditDriveContainer';
-import EditNewsContainer from '../components/EditNewsContainer/EditNewsContainer';
+import AdminUpdatePageContainer from '../components/AdminUpdatePageContainer/AdminUpdatePageContainer';
 import AdminHeader from '../components/Header/AdminHeader';
 
 export default function Admin() {
@@ -10,8 +9,7 @@ export default function Admin() {
     <div>
       <div className='admin-page'>
         <AdminHeader/>
-        <EditDriveContainer/>
-        <EditNewsContainer/>
+        <AdminUpdatePageContainer/>
     </div>
     </div>
   )

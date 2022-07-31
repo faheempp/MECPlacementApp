@@ -1,15 +1,10 @@
 .profile-page-container{
     text-align: center;
     margin: 3% 5% 0 5%;
-    flex-wrap: wrap;
     padding-left: 0px;
 }
 .img1{
     background-color:#ffff;
-    margin-left: 200px;
-    margin-top: 40px;
-    width: 100px;
-    padding-top: 20px;
 }
 .profile-heading{
     text-align: left;
@@ -23,8 +18,7 @@
 .con1{
     background-color: #ffff;
     width: 400px;
-    margin-left: 500px;
-    margin-top:-250px;
+   
     border-left: 3px solid #0000002a;
     height: 100%;
     border-radius: 0px ;
@@ -39,11 +33,8 @@
     border-radius: 5px;
     border-radius: 5px;
     font-family: 'Poppins';
-    text-align: left;
     border-radius: 5px;
     margin-top: 5px;
-    justify-content: space-between; 
-    position: relative;
 }
 .profile-info-item{
     background-color: #ffff;

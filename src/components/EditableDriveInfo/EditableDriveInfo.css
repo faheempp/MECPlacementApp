@@ -3,7 +3,7 @@
     font-size: 0.8rem;
     background-color: #ffffff;
     padding: 1rem;
-    width: 45%;
+    width: 93%;
     display: inline-block;
     border-radius: 5px;
     border: 2px rgba(199, 199, 199, 0.5) solid;
@@ -15,6 +15,9 @@
     background-color: #5ddef4;
     padding: 1rem;
     border-radius: 5px;
+    border: none;
+    display: inline-block;
+    width: 100%;
     font-size: 1rem;
     font-weight: 600;
 }
