@@ -7,9 +7,9 @@ export default function AdminNewsCard(props) {
   const newsId=props.newsId;
   const [message,setMessage]=useState({error:false,msg:""});
   const deleteNews=async()=>{
-    
     try{
             await NewsDataService.deleteNews(newsId);
+            window.location.reload()
             setMessage({error:false,msg:"News(Id:${newsId}) Deleted"});
         }
         catch(err){
