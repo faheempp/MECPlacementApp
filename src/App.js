@@ -10,11 +10,13 @@ import SignUp from './pages/SignUp';
 import Admin from './pages/Admin';
 import Create from './pages/Create';
 import DriveDetail from './pages/DriveDetail'
+import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+      <UserAuthContextProvider>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/application' element={<Application/>} />
@@ -25,6 +27,7 @@ function App() {
           <Route path='/drivedetail/:driveid' element={<DriveDetail/>} />
           <Route path='admin/create' element={<Create/>}/>
         </Routes>
+        </UserAuthContextProvider>
       </div>
     </BrowserRouter>
   );
