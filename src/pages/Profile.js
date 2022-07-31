@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header'
 import ProfilePageContainer from '../components/ProfilePageContainer/ProfilePageContainer'
 function Profile() {
@@ -7,8 +8,8 @@ function Profile() {
     <div>
       <div className='profile-page'>
         <Header/>
-        
         <ProfilePageContainer/>
+        <Footer/>
     </div>
     </div>
   )

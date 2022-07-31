@@ -7,8 +7,9 @@
     border: 2px rgba(199, 199, 199, 0.5) solid;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-    width: 45%;
+    width: 90%;
     display: inline-block;
+    border-radius: 5px;
 }
 .adm-news-card h4 {
     margin: 0;

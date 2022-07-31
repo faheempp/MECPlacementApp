@@ -17,9 +17,13 @@
     border-radius: 5px;
     border: none;
     display: inline-block;
+    color: #424242;
     width: 100%;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 600; 
+}
+.company-form .adm-news-container{
+    position: relative;
 }
 .company-form .feature{
     margin-top: 1rem;
@@ -67,6 +71,13 @@
 .company-form .update-button:hover{
     cursor: pointer;
     background-color: #54d0e0;
+}
+.company-form .drop-icons{
+    color: #424242; 
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
 }
 .company-form .delete-button{ 
     float: right;  
