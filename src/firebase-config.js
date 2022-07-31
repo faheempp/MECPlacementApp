@@ -3,7 +3,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import {initializeApp} from "firebase/app"
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore,doc,getDoc,setDoc} from 'firebase/firestore';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -27,5 +27,30 @@ const db = getFirestore(app);
 // User authentication with google
 
 export const auth = getAuth(app);
+//export const firestore=firebase.firestore(app);
+
+export const createUserDocument = async(user) =>
+{
+  
+  if (!user){
+    console.log("ERROR");
+    return;
+  }
+  const ref=user.uid
+  console.log(ref)
+
+
+      await setDoc(doc(db, "users", ref ),{
+        
+                Branch:"test",
+                CGPA:0,
+                Email: user.email,
+                Github:"test",
+                Name:"test",
+                Portfolio:"test",
+                Resume:"test",
+                Semester:1,
+              });
+}
 
 export { db, app }
