@@ -1,7 +1,21 @@
-import React from 'react'
+import React,{useState} from 'react'
 import louisimg from '../../images/lous.png'
 import './ProfilePageContainer.css';
 export default function ProfilePageContainer(){
+  const [studentName,setStudentName]=useState('');
+  const [branch, setBranch]=useState('');
+  const [classDivision,setClassDivision]=useState('');
+  const [semester,setSemester]=useState('');
+  const [cgpa,setCgpa]=useState('');
+  const [backlogs,setBacklogs]=useState('');
+  const [ktuid,setKtuId]=useState('');
+  const [githubLink,setGithubLink]=useState('');
+  const [portfolioLink,setPortfolioLink]=useState('');
+  const [linkedIn,setLinkedIn]=useState('');
+  const [phone,setPhone]=useState('');
+  const [email,setEmail]=useState('');
+  const [address,setAddress]=useState('');
+
   return (
     <div className='profile-page-container'>
         <h2 className="profile-heading">Profile</h2>
@@ -11,34 +25,42 @@ export default function ProfilePageContainer(){
           </div>
 
           <div className='con1'>
-          <div className='line'>
-          </div>
-          <div className='profile-info-item'>
-            <div className='profile-info-item-name'>
-              Name
+            <div>
+              <label className='profile-info-item' >Name</label>
+              <input className='profile-info-item-name'
+                type="text"
+                name="studentName"
+                id="studentName"
+                value={studentName}
+                onChange={(e)=>setStudentName(e.target.value)}/>
             </div>
-            <div className='profile-info-item-data'>
-              {localStorage.getItem("Name")}Louis
+            <div>
+              <label className='profile-info-item'>Branch</label>
+              <input className='profile-info-item-name'
+                type="text"
+                name="branch"
+                id="branch"
+                value={branch}
+                onChange={(e)=>setBranch(e.target.value)}/>
             </div>
-          </div>
-
-          <div className='profile-info-item'>
-            <div className='profile-info-item-name'>
-              Branch
+            <div>
+              <label className='profile-info-item' >Division</label>
+              <input className='profile-info-item-name'
+                type="text"
+                name="division"
+                id="division"
+                value={division}
+                onChange={(e)=>setDivision(e.target.value)}/>
             </div>
-            <div className='profile-info-item-data'>
-              Electronics and Communication
+            <div>
+              <label className='profile-info-item' >Semester</label>
+              <input className='profile-info-item-name'
+                type="text"
+                name="semester"
+                id="semester"
+                value={semester}
+                onChange={(e)=>setSemester(e.target.value)}/>
             </div>
-          </div>
-
-          <div className='profile-info-item'>
-            <div className='profile-info-item-name'>
-              Semester
-            </div>
-            <div className='profile-info-item-data'>
-              6
-            </div>
-          </div>
 
           <div className='profile-info-item'>
             <div className='profile-info-item-name'>
