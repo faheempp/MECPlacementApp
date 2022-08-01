@@ -13,6 +13,9 @@ import {
 } from "firebase/firestore";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { render } from "@testing-library/react";
+import driveServices from "../../services/drive.services";
+import DriveDataService from '../../services/drive.services.js'
+
 export default function ApplicationPageContainer() {
   const { user } = useUserAuth();
   const [applied_drives, setAppliedDrives] = useState("");
@@ -23,7 +26,13 @@ export default function ApplicationPageContainer() {
   const [ListItems, setList] = useState("");
   const [finalList, setfList] = useState("");
   const [ListItemsFinal, setListFinal] = useState("");
+  const [drives, setDrives]=useState([]);
 
+  const getDrives= async ()=>{
+    const data= await DriveDataService.getAllDrives();
+    console.log(data.docs)
+    setDrives(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
+}
   const HandleUserApplied = async (e) => {
     // Retrieve user Info About Drive
     const colref = collection(db, "users");
@@ -34,7 +43,7 @@ export default function ApplicationPageContainer() {
       const applied_drives = doc.get("Applied");
       setAppliedDrives(applied_drives);
     });
-    const ListItems = applied_drives.map(async (applied_drive) => {
+    /*const ListItems = applied_drives.map(async (applied_drive) => {
       const coldriveref = collection(db, "drives");
       const qdrive = query(
         coldriveref,
@@ -61,10 +70,31 @@ export default function ApplicationPageContainer() {
     });
     setList(ListItems);
     const finalList = await Promise.all(ListItems);
-    setfList(finalList);
+    setfList(finalList);*/
+    drives.map((doc,index)=>{
+      //console.log(doc.companyName)
+      for(let i=0;i<applied_drives.length;i++)
+      {
+        if(doc.companyName==applied_drives[i])
+        {
+          console.log(doc.companyName);
+          return (
+            <AppliedDriveCard
+            company={doc.companyName}
+            post={doc.post}
+            slot={doc.slot}
+            status="evaluating"
+          />
+        )
+      }
+    }
+  })
+
   };
   useEffect(() => {
+    getDrives();
     HandleUserApplied();
+    
   }, []);
 
   return (
