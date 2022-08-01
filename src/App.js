@@ -11,6 +11,7 @@ import Admin from './pages/Admin';
 import Create from './pages/Create';
 import DriveDetail from './pages/DriveDetail'
 import { UserAuthContextProvider } from "./context/UserAuthContext";
+import AdminApplicants from './pages/Admin_Applicants';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/admin' element={<Admin/>} />
           <Route path='/drivedetail/:driveid' element={<DriveDetail/>} />
           <Route path='admin/create' element={<Create/>}/>
+          <Route path='admin/applicants' element={<AdminApplicants/>}/>
         </Routes>
         </UserAuthContextProvider>
       </div>

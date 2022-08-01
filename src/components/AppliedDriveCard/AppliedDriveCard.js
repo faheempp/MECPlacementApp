@@ -1,6 +1,6 @@
 import React from 'react'
 import './AppliedDriveCard.css';
-export default function AppliedDriveCard({status}) {
+export default function AppliedDriveCard(props) {
   return (
     <div className='applied-drive-card'>
         <div className='applied-drive-card-left'>
@@ -11,7 +11,7 @@ export default function AppliedDriveCard({status}) {
         </div>
         <div className='applied-drive-card-right'>
             <div className='applied-drive-current-status'>Current Status:</div>
-            <p>{status}</p>
+            <p>{props.status}</p>
         </div>
     </div>
   )

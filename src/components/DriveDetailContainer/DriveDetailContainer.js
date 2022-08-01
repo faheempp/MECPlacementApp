@@ -21,6 +21,7 @@ export default function DriveDetailPageContainer(props) {
   const [slot, setSlot] = useState("");
   const { user } = useUserAuth();
   const [error, setError] = useState("");
+  const [isApplied,setIsApplied]=useState(false);
   let navigate = useNavigate();
 
   
@@ -56,27 +57,31 @@ export default function DriveDetailPageContainer(props) {
   useEffect(() => {
     getDriveDetail();
   }, []);
-  const UpdateUserApplied = async (e) => {
-    
-    e.preventDefault();
-    setError("");
-    const userRef = doc(db, "users", user.uid);
-    try {
-      await updateDoc(userRef, {
-        Applied: arrayUnion(companyName),    
-      })
-      navigate("/application");
-      
-    } catch (err) {
-      setError(err.message);
-    }
-    try{
-      const q0=query(userRef, where("Applied"))
-      const qst = await getDocs(q0);
-      console.log(qst)
-      }catch (err) {
+
+  //apply button function
+  const handleApply = async (e) => {
+    if(window.confirm('Are you sure you want to Apply for this drive?')){
+      e.preventDefault();
+      setError("");
+      const userRef = doc(db, "users", user.uid);
+      try {
+        await updateDoc(userRef, {
+          Applied: arrayUnion(companyName),    
+        })
+        setIsApplied(!isApplied);
+        navigate("/application");
+        
+      } catch (err) {
         setError(err.message);
       }
+      try{
+        const q0=query(userRef, where("Applied"))
+        const qst = await getDocs(q0);
+        console.log(qst)
+        }catch (err) {
+          setError(err.message);
+        }
+    }
     
   };
   return (
@@ -109,7 +114,7 @@ export default function DriveDetailPageContainer(props) {
           <div className="descrp company-reg-link">link</div>
           <h4 className="about company-website">Company Website</h4>
           <div className="descrp drive-company-web">Website here</div>
-          <button onClick={UpdateUserApplied}>Apply</button>
+          {isApplied?<button>Applied</button> : <button onClick={setIsApplied(!isApplied)}>Apply</button>}
         </div>
       </div>
     </div>

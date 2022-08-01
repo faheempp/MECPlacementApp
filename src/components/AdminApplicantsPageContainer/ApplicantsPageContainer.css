@@ -1,0 +1,16 @@
+.applicant-page-container {
+    text-align: center;
+    margin: 3% 5% 0 5%;
+    flex-wrap: wrap;
+}
+
+.applicant-page-container .applicant-page-heading {
+    text-align: left;
+    font-size: 1.3em;
+    display: block;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border-bottom: 2px #00acc1 solid;
+    float: none;
+}
+
