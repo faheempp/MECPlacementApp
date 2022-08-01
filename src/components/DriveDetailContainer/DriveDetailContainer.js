@@ -58,6 +58,7 @@ export default function DriveDetailPageContainer(props) {
     getDriveDetail();
   }, []);
 
+
   //apply button function
   const handleApply = async (e) => {
     if(window.confirm('Are you sure you want to Apply for this drive?')){
@@ -82,7 +83,7 @@ export default function DriveDetailPageContainer(props) {
           setError(err.message);
         }
     }
-    
+
   };
   return (
     <div className="drive-detail-page-container">
