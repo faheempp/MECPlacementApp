@@ -1,14 +1,11 @@
 import React from 'react'
 import './AppliedDriveCard.css';
-
-export default function AppliedDriveCard(props) {
-
 import {db} from '../../firebase-config';
 import { useUserAuth } from '../../context/UserAuthContext';
 import {doc,collection, getDocs,query,get,where} from 'firebase/firestore';
 
+export default function AppliedDriveCard(props) {
 
-export default function AppliedDriveCard({status}) {
   const { user } = useUserAuth();
   const HandleXYZ=async(e) => {  
     e.preventDefault();
@@ -50,5 +47,4 @@ export default function AppliedDriveCard({status}) {
         </div>
     </div>
   )
-}
 }
