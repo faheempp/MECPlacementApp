@@ -71,7 +71,7 @@ export default function ApplicationPageContainer() {
     setList(ListItems);
     const finalList = await Promise.all(ListItems);
     setfList(finalList);*/
-    drives.map((doc,index)=>{
+    const ListItems= drives.map((doc,index)=>{
       //console.log(doc.companyName)
       for(let i=0;i<applied_drives.length;i++)
       {
@@ -89,7 +89,7 @@ export default function ApplicationPageContainer() {
       }
     }
   })
-
+  setList(ListItems);
   };
   useEffect(() => {
     getDrives();
@@ -101,7 +101,7 @@ export default function ApplicationPageContainer() {
     <div className="application-page-container">
       <h2 className="application-heading">Your Applications</h2>
 
-      <div>{finalList}</div>
+      <div>{ListItems}</div>
       <button onClick={HandleUserApplied}>View Applications</button>
     </div>
   );
