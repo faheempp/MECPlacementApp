@@ -43,15 +43,18 @@ export default function EditableDriveInfo(props) {
         }
   }
   const deleteHandle=async()=>{
+    if(window.confirm('Are you sure you want to Delete this item?')){
+      
+        try{
+                await DriveDataService.deleteDrive(driveId);
+                setMessage({error:false,msg:"Drive Deleted"});
+                console.log(driveId);
+            }
+            catch(err){
+                setMessage({error:true,msg:err.message});
+            }
+    }
     
-    try{
-            await DriveDataService.deleteDrive(driveId);
-            setMessage({error:false,msg:"Drive Deleted"});
-            console.log(driveId);
-        }
-        catch(err){
-            setMessage({error:true,msg:err.message});
-        }
 
   }
   return (

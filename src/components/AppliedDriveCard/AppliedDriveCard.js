@@ -5,8 +5,8 @@ import { useUserAuth } from '../../context/UserAuthContext';
 import {doc,collection, getDocs,query,get,where} from 'firebase/firestore';
 import { pureFinalPropsSelectorFactory } from 'react-redux/es/connect/selectorFactory';
 
-
 export default function AppliedDriveCard(props) {
+
   const { user } = useUserAuth();
   /*const HandleXYZ=async(e) => {  
     e.preventDefault();
@@ -30,6 +30,7 @@ export default function AppliedDriveCard(props) {
   
   
   }*/
+
 
 
   return (
