@@ -1,0 +1,35 @@
+.applicant-info-container{
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(199, 199, 199, 1);
+    display: flex;
+    justify-content: space-between;
+}
+.applicant-info-item{
+display: inline-block;
+width: 100%;
+}
+.applicant-info-item-name{
+    color: rgb(26, 26, 26);
+    display: inline-block;
+    float: left;
+}
+.applicant-info-item-data{
+    color: #424242;
+    display: inline-block;
+    float: left;
+}
+.applicant-reject-button{
+    display: inline-block;
+    background-color: #ff867c;
+    border: 0;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.applicant-reject-button:hover {
+    cursor: pointer;
+    background-color: #ff6659;
+}

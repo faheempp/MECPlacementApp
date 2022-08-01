@@ -59,10 +59,12 @@ export default function EditableDriveInfo(props) {
   }
   return (
     <div className='company-form'>
-        <div className='adm-news-container'><button className='adm-card-heading' onClick={()=>setIsOpen(!isOpen)}>{companyName} Drive</button>
-        <div className='drop-icons' onClick={()=>setIsOpen(!isOpen)}>
-            {!isOpen?<AiFillCaretDown/>:<AiFillCaretUp/>}
-        </div></div>
+        <div className='adm-news-container'>
+            <button className='adm-card-heading' onClick={()=>setIsOpen(!isOpen)}>{companyName} Drive</button>
+            <div className='drop-icons' onClick={()=>setIsOpen(!isOpen)}>
+                {!isOpen?<AiFillCaretDown/>:<AiFillCaretUp/>}
+            </div>
+        </div>
         {isOpen && <form>
             <div className='feature'>
                 <label htmlFor="companyName">Company Name</label>

@@ -1,0 +1,31 @@
+.applicant-list-container{
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    display: inline-block;
+    width: 42%;
+    border-radius: 5px;
+    border: 2px rgba(199, 199, 199, 0.5) solid;
+    margin:1% 4% 1% 0;
+    float: left;
+}
+.applicant-list-container .drive-name{
+    background-color: #5ddef4;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: .5rem;
+    position: relative;
+}
+.applicant-list-container .drive-name .drop-icons {
+    color: #424242;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    font-size: 1rem;
+}
+.applicant-expandable-list{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
