@@ -115,7 +115,7 @@ export default function DriveDetailPageContainer(props) {
           <div className="descrp company-reg-link">link</div>
           <h4 className="about company-website">Company Website</h4>
           <div className="descrp drive-company-web">Website here</div>
-          {isApplied?<button>Applied</button> : <button onClick={setIsApplied(!isApplied)}>Apply</button>}
+          {isApplied?<button>Applied</button> : <button onClick={handleApply}>Apply</button>}
         </div>
       </div>
     </div>
