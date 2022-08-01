@@ -3,11 +3,12 @@ import './AppliedDriveCard.css';
 import {db} from '../../firebase-config';
 import { useUserAuth } from '../../context/UserAuthContext';
 import {doc,collection, getDocs,query,get,where} from 'firebase/firestore';
+import { pureFinalPropsSelectorFactory } from 'react-redux/es/connect/selectorFactory';
 
 
-export default function AppliedDriveCard({status}) {
+export default function AppliedDriveCard(props) {
   const { user } = useUserAuth();
-  const HandleXYZ=async(e) => {  
+  /*const HandleXYZ=async(e) => {  
     e.preventDefault();
    
     const colref=collection(db,"users")
@@ -28,21 +29,21 @@ export default function AppliedDriveCard({status}) {
     })
   
   
-  }
+  }*/
 
 
   return (
    
     <div className='applied-drive-card'>
         <div className='applied-drive-card-left'>
-            <h3>Company Name</h3>
+            <h3>{props.company}</h3>
             <h4>Post</h4>
             <p>Date of Application: 01/01/2022</p>
-            <button onClick={HandleXYZ}>View Application</button>
+            <button>View Application</button>
         </div>
         <div className='applied-drive-card-right'>
             <div className='applied-drive-current-status'>Current Status:</div>
-            <p>{status}</p>
+            <p>{props.status}</p>
         </div>
     </div>
   )
