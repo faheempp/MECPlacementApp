@@ -65,19 +65,19 @@ export default function DriveDetailPageContainer(props) {
       await updateDoc(userRef, {
         Applied: arrayUnion(companyName),    
       })
+      const colref=collection(db,"users")
+      const q=query(colref,where("Branch","==","CS"))
+      console.log(q)
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      console.log(doc.id, " => ", doc.data())});
       navigate("/application");
       
-    } catch (err) {
+    } 
+    catch (err) {
       setError(err.message);
     }
-    try{
-      const q0=query(userRef, where("Applied"))
-      const qst = await getDocs(q0);
-      console.log(qst)
-      }catch (err) {
-        setError(err.message);
-      }
-    
   };
   return (
     <div className="drive-detail-page-container">

@@ -33,7 +33,7 @@ export default function Signup(){
     console.log(user.email);
     try {  
     await createUserDocument(user)
-    navigate('/application');
+    navigate('/profile');
   }catch (err) {
     setError(err.message);
   }
