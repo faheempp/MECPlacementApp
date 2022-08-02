@@ -34,7 +34,11 @@ function Profile() {
               github={doc.Github}
               portfolio={doc.Portfolio}
               semester={doc.Semester}
-
+              address={doc.Address}
+              linkedin={doc.Linkedin}
+              phone={doc.Phone}
+              ktuid={doc.KtuId}
+              division={doc.Division}
               />
             )
           }

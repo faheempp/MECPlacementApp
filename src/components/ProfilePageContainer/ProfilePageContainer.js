@@ -13,17 +13,17 @@ export default function ProfilePageContainer(props){
 
   const [studentName,setStudentName]=useState(props.name);
   const [branch, setBranch]=useState(props.branch);
-  const [classDivision,setClassDivision]=useState("");
+  const [classDivision,setClassDivision]=useState("props.division");
   const [semester,setSemester]=useState(props.semester);
   const [cgpa,setCgpa]=useState(props.cgpa);
   const [backlogs,setBacklogs]=useState(props.backlog);
-  const [ktuid,setKtuId]=useState('');
+  const [ktuid,setKtuId]=useState(props.ktuid);
   const [githubLink,setGithubLink]=useState(props.github);
   const [portfolioLink,setPortfolioLink]=useState(props.portfolio);
-  const [linkedin,setLinkedin]=useState('');
-  const [phone,setPhone]=useState('');
+  const [linkedin,setLinkedin]=useState(props.linkedin);
+  const [phone,setPhone]=useState(props.phone);
   const [email,setEmail]=useState(props.email);
-  const [address,setAddress]=useState('');
+  const [address,setAddress]=useState(props.address);
   const { user }=useUserAuth()
   const [error, setError] = useState("");
   let navigate=useNavigate();
