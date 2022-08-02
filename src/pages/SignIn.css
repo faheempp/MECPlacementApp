@@ -14,8 +14,7 @@
         display: inline-block;
         float: left;
         width: 50%;
-        color: white;
-        background-color: red;
+        color: white; 
         box-shadow: 0px 0px 0px 0px grey;
     
 }
@@ -101,8 +100,8 @@
     margin: 2% 1% 0% 1%;
     display: inline-block;
     width: 100%;
-    line-height: 200%;
-    font-size: 120%;
+    height: 2.5rem;
+    font-size: 1rem;
     padding: 1% 2% 1% 2%;
     border: none;
     border-radius: 5px;
@@ -120,7 +119,8 @@
 .formfooter{
     margin: 10px 0 0 0;
     text-align: center;
-    font-size: .8rem;
+    font-size: .7rem;
+    color: grey;
 }
 .input-field .error-input{
     background-color: #fcdfdc;
@@ -133,5 +133,15 @@
 .input-field .error-input:hover{
     background-color: #fcdfdc;
     border-color: #e64f41;
+}
+.separator{
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: 'Poppins';
+    font-size: 0.8rem;
+}
+.separator p{
+    color: grey;
+    margin: 0rem;
 }
 

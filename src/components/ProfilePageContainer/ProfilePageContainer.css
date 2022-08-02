@@ -3,31 +3,45 @@
     margin: 3% 5% 0 5%;
     padding-left: 0px;
 }
-.img1{
+.img1{ 
+    margin-top: 3rem;
+    display:inline-block;
     background-color:#ffff;
+}
+.img1 img{
+    width: 8rem;
+    border-radius: 10rem;
+}
+.img1 .img-name{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    margin-top: 0;
 }
 .profile-heading{
     text-align: left;
     font-size: 1.3em;
+    color: #424242;
     display: block;
     font-family: 'Poppins';
-    font-weight: 500;
+    font-weight: 600;
     border-bottom: 2px #00acc1 solid;
     float: none;
 }
-.con1{
+.con1{ 
+    margin-top: 3rem;
     background-color: #ffff;
-    width: 400px;
-   
-    border-left: 3px solid #0000002a;
-    height: 100%;
-    border-radius: 0px ;
+    width: 30rem;
+    border-left: 3px solid #0000002a; 
     margin-bottom: 20px;
+    text-align: left; 
+    float: right;
+    margin-right: 8rem;
+    padding-left: 3rem;
 
 }
-.profile-info-container{
-    background-color: #ffff;
-    border-left: 10px solid #5ddef4;
+.profile-info-container{ 
+    position: relative;
+    background-color: #ffff; 
     font-family: 'Poppins';
     text-align: center;
     border-radius: 5px;
@@ -35,26 +49,61 @@
     font-family: 'Poppins';
     border-radius: 5px;
     margin-top: 5px;
+    height: 45rem;
 }
-.profile-info-item{
-    background-color: #ffff;
-    width: 10rem;
+.profile-info-item{ 
+    color: #424242;
+    font-size: 0.8rem; 
     margin-left: 50px;
     margin-top: 10px;
+    margin-right: 0.8rem;
     
 }
 .profile-info-item-name {
-    font-size: .8rem;
-    border-bottom: 1px blue solid;
-    color: rgb(59, 56, 56);
+    width: 17rem;
+    text-align: left;
+    font-family: 'Poppins'; 
+    font-size: .8rem; 
+    right: 1rem; 
+    color: #808080;
+    margin-right: 3rem;
+    float: right;
+} 
+.profile-info-item-name:focus{
+    color: #424242;
+    background-color: #f0f0f0;
 }
-.profile-info-item-data {
-    font-size: .9rem;
+.profile-info-group{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
-.save-profile-button{
-    padding-top: 20px;
-    padding-left: 50px;
-    margin-left: 0px
-
-
+.profile-button{ 
+    margin: 1rem;
+    width: 10rem;
+    height: 2.5rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border: 0;
+    background-color: #5ddef4;  
+    bottom: 1rem;
+    border-radius: 5px; 
+    color: #424242;
+    font-family: 'Poppins';
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.profile-button:hover{
+    cursor: pointer;
+    background-color: #54d0e0;
+}
+.save-button{    
+    margin-right: 1.5rem; 
+    width: 17rem;
+    float: right; 
+    margin-top: 0rem;
+}
+.add-resume-button{ 
+    width: 17rem;
+    float: right;  
+    margin-right: 1.5rem;
 }
