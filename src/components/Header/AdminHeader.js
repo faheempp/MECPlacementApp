@@ -3,9 +3,14 @@ import './Header.css';
 
 import { Link } from 'react-router-dom'
 import  collegelogo from'../../images/collegelogo.png';
+import {useUserAuth} from '../../context/UserAuthContext';
 
 
 function AdminHeader({active}){
+    const {user, logOut}=useUserAuth()
+    const HandleLogout=async()=>{ 
+        await logOut();
+    }
     return(
         <div className="header">
             <div className="logotitlecontainer">
@@ -20,7 +25,7 @@ function AdminHeader({active}){
                 <Link to="/admin/applicants" className="nav-item">Applicants</Link>
                 {/* <Link to="/application" className="nav-item">Application</Link> */}
                 {/* <Link to="/profile" className="nav-item">Profile</Link> */}
-                <Link to="/signin" className="nav-item">Log Out</Link>
+                <Link to="/"onClick={HandleLogout} className="nav-item">Log Out</Link>
             </div>
         </div>
     )

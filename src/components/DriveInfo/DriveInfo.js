@@ -10,7 +10,7 @@ function DriveInfo(props){
   const lastDate=props.lastDate;
   const criteria=props.criteria;
   const id=props.id;
-  console.log(props)
+  //console.log(props)
     return(
         <div className="driveinfo">
           <div className="drive-info-left-card">            

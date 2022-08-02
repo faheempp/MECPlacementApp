@@ -1,5 +1,4 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-
 import './App.css';
 
 import Profile from './pages/Profile';
@@ -11,7 +10,9 @@ import Admin from './pages/Admin';
 import Create from './pages/Create';
 import DriveDetail from './pages/DriveDetail'
 import { UserAuthContextProvider } from "./context/UserAuthContext";
-import AdminApplicants from './pages/Admin_Applicants';
+import AdminApplicants from './pages/AdminApplicants';
+import AdminProtectedRoute from './ProtectedRoute/AdminProtectedRoute';
+import StudentProtectedRoute from './ProtectedRoute/StudentProtectedRoute';
 
 function App() {
   return (
@@ -19,15 +20,15 @@ function App() {
       <div className="App">
       <UserAuthContextProvider>
         <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/application' element={<Application/>} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/signin' element={<SignIn/>} />
+          <Route path='/' element={<SignIn/>} />
           <Route path='/signup' element={<SignUp/>} />
-          <Route path='/admin' element={<Admin/>} />
+          <Route path='/home' element={<StudentProtectedRoute><Home/></StudentProtectedRoute>}/>
+          <Route path='/application' element={<StudentProtectedRoute><Application/></StudentProtectedRoute>} />
+          <Route path='/profile' element={<StudentProtectedRoute><Profile /></StudentProtectedRoute>} />
           <Route path='/drivedetail/:driveid' element={<DriveDetail/>} />
-          <Route path='admin/create' element={<Create/>}/>
-          <Route path='admin/applicants' element={<AdminApplicants/>}/>
+          <Route path='/admin' element={<AdminProtectedRoute><Admin/></AdminProtectedRoute>} />
+          <Route path='admin/create' element={<AdminProtectedRoute><Create/></AdminProtectedRoute>}/>
+          <Route path='admin/applicants' element={<AdminProtectedRoute><AdminApplicants/></AdminProtectedRoute>}/>
         </Routes>
         </UserAuthContextProvider>
       </div>

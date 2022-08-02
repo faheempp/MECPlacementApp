@@ -23,7 +23,10 @@ export default function Signin(){
     setError("");
     try {
       await logIn(email, password);
-      navigate("/application");
+      if(email=="pcadmin@pc.com"){
+        navigate("/admin");
+      }
+      else{navigate("/application");}
     } catch (err) {
       setError(err.message);
     }
