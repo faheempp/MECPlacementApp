@@ -21,24 +21,39 @@ function Profile() {
   return (
     <div>
       <div className="profile-page">
-        <Header />
+        <Header /> 
         {users.map((doc, index) => {
-          if (doc.UserID == user.uid) {
-            return (
+          if (doc.UserID === user.uid) {
+            return ( 
               <ProfilePageContainer 
-              name={doc.Name} 
+              name={doc.Name}
               backlog={doc.Backlog}
               branch={doc.Branch}
               cgpa={doc.CGPA}
               email={doc.Email}
               github={doc.Github}
               portfolio={doc.Portfolio}
-              semster={doc.Semester}
-
+              semster={doc.Semester} 
               />
             )
           }
-        })}
+          // else{
+          //   return(
+          //     <ProfilePageContainer 
+          //     name="" 
+          //     backlog=""
+          //     branch=""
+          //     cgpa=""
+          //     email=""
+          //     github=""
+          //     portfolio=""
+          //     semster="" 
+          //     />
+          //   )
+          // }
+        }
+        )
+        }
         <Footer />
       </div>
     </div>

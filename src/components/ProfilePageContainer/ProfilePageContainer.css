@@ -4,6 +4,7 @@
     padding-left: 0px;
 }
 .img1{
+    display:inline-block;
     background-color:#ffff;
 }
 .profile-heading{
@@ -15,17 +16,18 @@
     border-bottom: 2px #00acc1 solid;
     float: none;
 }
-.con1{
+.con1{ 
+    margin-top: 3rem;
     background-color: #ffff;
-    width: 400px;
-   
-    border-left: 3px solid #0000002a;
-    height: 100%;
-    border-radius: 0px ;
+    width: 30rem;
+    border-left: 3px solid #0000002a; 
     margin-bottom: 20px;
+    text-align: left; 
+    float: right;
 
 }
-.profile-info-container{
+.profile-info-container{ 
+    position: relative;
     background-color: #ffff;
     border-left: 10px solid #5ddef4;
     font-family: 'Poppins';
@@ -35,26 +37,31 @@
     font-family: 'Poppins';
     border-radius: 5px;
     margin-top: 5px;
+    height: 40rem;
 }
-.profile-info-item{
-    background-color: #ffff;
-    width: 10rem;
+.profile-info-item{ 
+    color: #424242;
+    font-size: 0.8rem; 
     margin-left: 50px;
     margin-top: 10px;
+    margin-right: 0.8rem;
     
 }
 .profile-info-item-name {
-    font-size: .8rem;
-    border-bottom: 1px blue solid;
-    color: rgb(59, 56, 56);
-}
-.profile-info-item-data {
-    font-size: .9rem;
+    width: 17rem;
+    text-align: left;
+    font-size: .8rem; 
+    right: 1rem; 
+    color: #424242;
+    margin-right: 3rem;
+    float: right;
+} 
+.profile-info-group{
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 .save-profile-button{
     padding-top: 20px;
     padding-left: 50px;
     margin-left: 0px
-
-
 }
