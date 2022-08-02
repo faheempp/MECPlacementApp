@@ -2,13 +2,18 @@ import React from 'react'
 import { ButtonGroup } from 'react-bootstrap'
 import './ApplicantInfoCard.css'
 import  DataService  from '../../services/acceptedDrives.services'
+import  DataRejectService  from '../../services/rejectedDrives.services'
 export default function ApplicantInfoCard(props) {
     const HandleAccept=async(e)=>{
         e.preventDefault();
         console.log(props.company)
-        //await DataService.createDocument(props.user_id,props.name)
-        
         await DataService.updateDocument(props.user_id,props.company,props.name)
+        console.log("lala")
+    }
+    const HandleReject=async(e)=>{
+        e.preventDefault();
+        console.log(props.company)
+        await DataRejectService.updateDocument(props.user_id,props.company,props.name)
         console.log("lala")
     }
 
@@ -33,7 +38,7 @@ export default function ApplicantInfoCard(props) {
             </div>
         </div>
         <div className='applicant-info-container-right'>
-            <button className='applicant-reject-button'>Reject</button>
+            <button className='applicant-reject-button' onClick={HandleReject}>Reject</button>
             <button className='applicant-accept-button' onClick={HandleAccept}>Accept</button>
         </div>
     </div>
