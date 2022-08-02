@@ -8,20 +8,20 @@ import { doc, updateDoc } from "firebase/firestore";
 
 
 
-export default function ProfilePageContainer(){
+export default function ProfilePageContainer(props){
 
-  const [studentName,setStudentName]=useState('');
-  const [branch, setBranch]=useState('');
-  const [classDivision,setClassDivision]=useState('');
-  const [semester,setSemester]=useState('');
-  const [cgpa,setCgpa]=useState('');
-  const [backlogs,setBacklogs]=useState('');
+  const [studentName,setStudentName]=useState(props.name);
+  const [branch, setBranch]=useState(props.branch);
+  const [classDivision,setClassDivision]=useState(props.cgpa);
+  const [semester,setSemester]=useState(props.semester);
+  const [cgpa,setCgpa]=useState(props.cgpa);
+  const [backlogs,setBacklogs]=useState(props.backlog);
   const [ktuid,setKtuId]=useState('');
-  const [githubLink,setGithubLink]=useState('');
-  const [portfolioLink,setPortfolioLink]=useState('');
+  const [githubLink,setGithubLink]=useState(props.github);
+  const [portfolioLink,setPortfolioLink]=useState(props.portfolio);
   const [linkedin,setLinkedin]=useState('');
   const [phone,setPhone]=useState('');
-  const [email,setEmail]=useState('');
+  const [email,setEmail]=useState(props.email);
   const [address,setAddress]=useState('');
   const { user }=useUserAuth()
   const [error, setError] = useState("");

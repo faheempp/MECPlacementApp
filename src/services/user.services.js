@@ -22,10 +22,11 @@ export class UserDataService{
         return getDocs(UserCollectionRef)
     }
 
-    /*getDrive=(id)=>{
-        const driveDoc=doc(db,"drives",id);
-        console.log(driveDoc)
-        return getDoc(driveDoc);
-    }*/
+    getUser=(id)=>{
+        const UserDoc=doc(db,"users",id);
+        console.log("wassup")
+        console.log(UserDoc)
+        return getDoc(UserDoc);
+    }
 }
 export default new UserDataService();
