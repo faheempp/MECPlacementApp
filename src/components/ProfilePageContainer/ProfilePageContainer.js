@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {auth, createUserDocument,db} from '../../firebase-config'
 import louisimg from '../../images/lous.png'
 import './ProfilePageContainer.css';
+import defaultimg from '../../images/default.jpg'
 import {useUserAuth} from "../../context/UserAuthContext"
 import { useNavigate } from 'react-router-dom'; 
 import { doc, updateDoc } from "firebase/firestore";
@@ -58,7 +59,8 @@ return (
         <h2 className="profile-heading">Profile</h2>
         <div className='profile-info-container'>
           <div className='img1'>
-            image here.
+            <img src={defaultimg} alt='user'/>
+            <p className='img-name'>{studentName}</p>
           </div>
 
           <div className='con1'>
@@ -181,18 +183,16 @@ return (
                 onChange={(e)=>setAddress(e.target.value)}/>
             </div>
             <div className='add-resume-button'>
-            <button>
-              add resume
+            <button className='profile-button add-resume-button'>
+              Add resume
             </button>
           </div>
-
-          <div className='save-profile-button'>
-            <button onClick={HandleProfileUpdate}>
+          <div className='save-button'>
+          <button className='profile-button save-button' onClick={HandleProfileUpdate}>
               Save
-            </button>
-          </div>
-          </div>
-
+            </button> 
+            </div>
+          </div>  
         </div>
     </div>
   )
