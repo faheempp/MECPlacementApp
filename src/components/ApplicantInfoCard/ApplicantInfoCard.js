@@ -24,6 +24,7 @@ export default function ApplicantInfoCard() {
         </div>
         <div className='applicant-info-container-right'>
             <button className='applicant-reject-button'>Reject</button>
+            <button className='applicant-accept-button'>Accept</button>
         </div>
     </div>
   )
