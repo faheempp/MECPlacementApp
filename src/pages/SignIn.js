@@ -26,7 +26,7 @@ export default function Signin(){
       if(email=="pcadmin@pc.com" && password == "pcadmin"){
         navigate("/admin");
       }
-      else{navigate("/application");}
+      else{navigate("/home");}
     } catch (err) {
       setError(err.message);
     }
