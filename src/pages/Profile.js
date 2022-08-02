@@ -33,7 +33,7 @@ function Profile() {
               email={doc.Email}
               github={doc.Github}
               portfolio={doc.Portfolio}
-              semster={doc.Semester}
+              semester={doc.Semester}
 
               />
             )
