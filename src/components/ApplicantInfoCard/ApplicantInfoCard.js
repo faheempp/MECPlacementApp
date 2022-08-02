@@ -5,8 +5,11 @@ import  DataService  from '../../services/acceptedDrives.services'
 export default function ApplicantInfoCard(props) {
     const HandleAccept=async(e)=>{
         e.preventDefault();
-        console.log(props.user_id)
-        await DataService.createDocument(props.user_id)
+        console.log(props.company)
+        //await DataService.createDocument(props.user_id,props.name)
+        
+        await DataService.updateDocument(props.user_id,props.company,props.name)
+        console.log("lala")
     }
 
   return (

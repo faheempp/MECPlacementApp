@@ -34,7 +34,7 @@ export default function DriveApplicantsList(props) {
                     for(let i=0;i<applied_size;i++)
                     {
                     if(doc.Applied[i]== props.company)
-                        return <ApplicantInfoCard name={doc.Name} Branch={doc.Branch} CGPA={doc.CGPA} No_of_Backlogs={doc.Backlog} user_id={doc.id}/> ;
+                        return <ApplicantInfoCard name={doc.Name} Branch={doc.Branch} CGPA={doc.CGPA} No_of_Backlogs={doc.Backlog} user_id={doc.id} company={props.company}/> ;
                     }
                 })}
             </div>}

@@ -1,20 +1,36 @@
 import { db } from "../firebase-config";
-
-import { collection, setDoc, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc } from "firebase/firestore";
-
+import { FieldValue } from "firebase/firestore";
+import { collection, setDoc, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc,docarrayUnion } from "firebase/firestore";
+import {arrayUnion}  from "firebase/firestore";
 const CollectionRef = collection(db, "accepted");
 export class DataService {
-    createDocument = async (userid) => {
+    createDocument = async (userid,username) => {
 
         //const ref = user.uid
         console.log(userid)
-
-
         await setDoc(doc(db, "accepted", userid),
             {
-                applied: "Success"
+                //applied: "Success"
+                Accepteddrives:"", 
+                Applicant_name:username
             });
         console.log("leela")
+    }
+
+    updateDocument =async(userid,companyName,username)=>{
+        const userRef=doc(db,"accepted",userid)
+        console.log(companyName)
+        try{
+        await setDoc(userRef, {
+        Accepteddrives: arrayUnion(companyName),    
+        Applicant_name:username,
+      },
+      {
+        merge:true
+      },
+    )}catch(err){
+        console.log(err)
+    }
     }
 
     /* updateDrive=(id, updatedDrive)=>{
@@ -25,13 +41,13 @@ export class DataService {
      deleteDrive=(id)=>{
          const driveDoc=doc(db,"drives",id);
          return deleteDoc(driveDoc);
-     }
+     }*/
  
-     getAllUsers=()=>{
+    /* getAllUsers=()=>{
          return getDocs(UserCollectionRef)
-     }
+     }*/
  
-     getUser=(id)=>{
+     /*getUser=(id)=>{
          const UserDoc=doc(db,"users",id);
          console.log("wassup")
          console.log(UserDoc)
