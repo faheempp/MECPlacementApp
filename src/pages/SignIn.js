@@ -23,10 +23,10 @@ export default function Signin(){
     setError("");
     try {
       await logIn(email, password);
-      if(email=="pcadmin@pc.com" && password == "pcadmin"){
+      if(email=="pcadmin@pc.com" && password === "pcadmin"){
         navigate("/admin");
       }
-      else{navigate("/application");}
+      else{navigate("/home");}
     } catch (err) {
       setError(err.message);
     }
@@ -42,32 +42,12 @@ export default function Signin(){
     setError(err.message);
   }
 };
-
-
-
-
-  
     const handleChangeEmail=(e)=>{
         setEmail(e.target.value) 
     }
     const handleChangePassword=(e)=>{
         setPassword(e.target.value) 
     }
-
-    const checkPasswords=(e)=>{
-        if(document.getElementById('password').value === document.getElementById('conf-password').value){
-            document.getElementById('passwords-not-same-error').className='hidden-error';
-            document.getElementById('password').classList.remove('error-input')
-            document.getElementById('conf-password').classList.remove('error-input')
-    
-        }
-        else{
-            e.preventDefault();
-            document.getElementById('passwords-not-same-error').className='visible-error'; 
-            document.getElementById('password').className='error-input';
-            document.getElementById('conf-password').classList.add('error-input');
-        }
-      }
     return (
       <div className='signin-page-container'>
         <div className='title-section'>
@@ -93,6 +73,7 @@ export default function Signin(){
             <div className='input-field signin-button-container'>
                 <button className='signin-button' type = "Submit">Sign In</button>
             </div>
+            <div className='separator'><p>OR</p></div>
             <div className='input-field signin-button-container'>
             <button className='signin-button' type = "Submit" onClick={HandleGoogleAuth}>Sign In With Google</button>
                 </div>
