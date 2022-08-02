@@ -30,7 +30,10 @@ export default function ProfilePageContainer(){
   const HandleProfileUpdate=async(e) => {  
     e.preventDefault();
     setError("");
+    
     const userRef=doc(db,"users",user.uid)
+    console.log(userRef.Name)
+    console.log(user.uid)
     try {  
     await updateDoc(userRef,{
       Name:studentName,
@@ -39,10 +42,12 @@ export default function ProfilePageContainer(){
       Github:githubLink,
       Portfolio:portfolioLink,
       Semester:semester,
-      UserID:user.uid
+      UserID:user.uid,
+      Backlog:backlogs
 
 
     })
+    
     navigate('/application');
   }catch (err) {
     setError(err.message);
