@@ -28,13 +28,13 @@ export default function DriveApplicantsList(props) {
             {isOpen && <div className='applicant-expandable-list'>
 
                 {users.map((doc, index) => {
-                    console.log(props.company)
+                    console.log("doc id:"+doc.id)
                     let applied_size=doc.Applied.length
                     console.log(applied_size)
                     for(let i=0;i<applied_size;i++)
                     {
                     if(doc.Applied[i]== props.company)
-                        return <ApplicantInfoCard name={doc.Name} Branch={doc.Branch} CGPA={doc.CGPA} No_of_Backlogs={doc.Backlog}/> ;
+                        return <ApplicantInfoCard name={doc.Name} Branch={doc.Branch} CGPA={doc.CGPA} No_of_Backlogs={doc.Backlog} user_id={doc.id}/> ;
                     }
                 })}
             </div>}

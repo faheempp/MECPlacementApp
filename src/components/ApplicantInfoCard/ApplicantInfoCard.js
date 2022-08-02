@@ -1,7 +1,14 @@
 import React from 'react'
 import { ButtonGroup } from 'react-bootstrap'
 import './ApplicantInfoCard.css'
+import  DataService  from '../../services/acceptedDrives.services'
 export default function ApplicantInfoCard(props) {
+    const HandleAccept=async(e)=>{
+        e.preventDefault();
+        console.log(props.user_id)
+        await DataService.createDocument(props.user_id)
+    }
+
   return (
     <div className='applicant-info-container'>
         <div className='applicant-info-container-left'>
@@ -24,7 +31,7 @@ export default function ApplicantInfoCard(props) {
         </div>
         <div className='applicant-info-container-right'>
             <button className='applicant-reject-button'>Reject</button>
-            <button className='applicant-accept-button'>Accept</button>
+            <button className='applicant-accept-button' onClick={HandleAccept}>Accept</button>
         </div>
     </div>
   )
