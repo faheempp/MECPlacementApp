@@ -33,7 +33,7 @@ export default function Signup(){
     console.log(user.email);
     try {  
     await createUserDocument(user)
-    navigate('/profile');
+    navigate('/home');
   }catch (err) {
     setError(err.message);
   }
@@ -105,7 +105,7 @@ export default function Signup(){
                 <button className='signin-button' onClick={ checkPasswords }>Sign Up</button>
             </div>
         </form>
-        <div className='formfooter' >Already have an account? <Link to="/signin" className="">Sign In</Link></div>
+        <div className='formfooter' >Already have an account? <Link to="/" className="">Sign In</Link></div>
         </div>
         </div>
     )

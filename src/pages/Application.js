@@ -5,7 +5,7 @@ import ApplicationPageContainer from '../components/ApplicationPageContainer/App
 export default function Application() {
   return (
     <div className='application-page'>
-        <Header/>
+        <Header active='application'/>
         <ApplicationPageContainer/>
         <Footer/>
     </div>
