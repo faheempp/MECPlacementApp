@@ -13,7 +13,7 @@ export default function ProfilePageContainer(props){
 
   const [studentName,setStudentName]=useState(props.name);
   const [branch, setBranch]=useState(props.branch);
-  const [classDivision,setClassDivision]=useState(props.cgpa);
+  const [classDivision,setClassDivision]=useState("");
   const [semester,setSemester]=useState(props.semester);
   const [cgpa,setCgpa]=useState(props.cgpa);
   const [backlogs,setBacklogs]=useState(props.backlog);
@@ -33,6 +33,8 @@ export default function ProfilePageContainer(props){
     setError("");
     
     const userRef=doc(db,"users",user.uid)
+    console.log(studentName)
+    console.log("himam")
     console.log(userRef.Name)
     console.log(user.uid)
     try {  
@@ -45,10 +47,8 @@ export default function ProfilePageContainer(props){
       Semester:semester,
       UserID:user.uid,
       Backlog:backlogs
-
-
     })
-    
+   
     navigate('/application');
   }catch (err) {
     setError(err.message);

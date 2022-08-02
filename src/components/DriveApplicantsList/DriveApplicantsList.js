@@ -5,7 +5,7 @@ import './DriveApplicantsList.css'
 import UserDataService from '../../services/user.services.js'
 
 export default function DriveApplicantsList(props) {
-    const [isOpen,setIsOpen]=useState(true);
+    const [isOpen,setIsOpen]=useState(false);
     const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
