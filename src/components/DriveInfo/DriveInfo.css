@@ -1,6 +1,6 @@
 .driveinfo {  
     width: 100%;
-    min-height: 190px;  
+    min-height: 200px;  
     background-color:    #ffffff; 
     margin: 0; 
     padding: 0.5rem 1rem 0rem 1rem;
@@ -62,7 +62,7 @@
 .driveinfo button{
     align-content: center;
     width: 10rem;
-    height: 2rem;
+    height: 2.5rem;
     font-family: 'Poppins';
     font-weight: 500;
     border: 0;

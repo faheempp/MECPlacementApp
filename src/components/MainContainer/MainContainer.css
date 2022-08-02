@@ -15,8 +15,9 @@
     text-align: left;
     font-size: 1.3em;
     display: block;
+    color: #424242;
     font-family: 'Poppins';
-    font-weight: 500;
+    font-weight: 600;
     border-bottom: 2px #00acc1 solid;
     float: none;
 }
@@ -42,9 +43,10 @@
 .news-section-heading{
     text-align: left;
     font-size: 1.3em;
+    color: #424242;
     display: block;
     font-family: 'Poppins';
-    font-weight: 500;
+    font-weight: 600;
     border-bottom: 2px #00acc1 solid;
     margin-bottom: 1.5rem;
     float: none;
