@@ -30,10 +30,10 @@ export default function Signup(){
       setError(err.message);
     }
     setError("");
-    console.log(user.email);
+    //console.log(user.email);
     try {  
     await createUserDocument(user)
-    navigate('/home');
+    navigate('/profile');
   }catch (err) {
     setError(err.message);
   }
