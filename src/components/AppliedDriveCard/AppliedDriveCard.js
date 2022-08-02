@@ -40,8 +40,7 @@ export default function AppliedDriveCard(props) {
             <h3>{props.company}</h3>
             <h4>{props.post}</h4>
             <h4>{props.slot}</h4>
-            <p>Date of Application: 01/01/2022</p>
-            <button>View Application</button>
+            {/* <button>View Application</button> */}
         </div>
         <div className='applied-drive-card-right'>
             <div className='applied-drive-current-status'>Current Status:</div>
