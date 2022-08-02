@@ -75,7 +75,7 @@ export default function ApplicationPageContainer() {
       //console.log(doc.companyName)
       for(let i=0;i<applied_drives.length;i++)
       {
-        if(doc.companyName==applied_drives[i])
+        if(doc.companyName===applied_drives[i])
         {
           console.log(doc.companyName);
           return (
@@ -94,15 +94,14 @@ export default function ApplicationPageContainer() {
   useEffect(() => {
     getDrives();
     HandleUserApplied();
-    
-  }, []);
-
+  });
+ 
   return (
     <div className="application-page-container">
       <h2 className="application-heading">Your Applications</h2>
 
       <div>{ListItems}</div>
-      <button onClick={HandleUserApplied}>View Applications</button>
+      {/* <button onClick={HandleUserApplied}>View Applications</button> */}
     </div>
   );
 }
