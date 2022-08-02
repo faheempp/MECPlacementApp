@@ -22,7 +22,7 @@ export default function Home() {
   }
   return (
     <div>
-        <Header/>
+        <Header active='home'/>
         <div className='input-field signin-button-container'>
         {/* <button className='signin-button' onClick={ HandleLogout } style ={{ width: 120 }}>LogOut</button> */}
         </div>

@@ -21,7 +21,7 @@ function Profile() {
   return (
     <div>
       <div className="profile-page">
-        <Header /> 
+        <Header active='profile'/> 
         {users.map((doc, index) => {
           if (doc.UserID === user.uid) {
             return ( 

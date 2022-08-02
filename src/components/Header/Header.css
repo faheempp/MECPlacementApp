@@ -43,4 +43,8 @@ display: flex;
     color: #424242;
 
 }
+.nav .active{
+    font-weight: 600;
+    border-bottom: 2px solid #424242;
+}
 

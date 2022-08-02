@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Header.css';
 
 import { Link } from 'react-router-dom'
@@ -7,13 +7,19 @@ import {useUserAuth} from '../../context/UserAuthContext';
 import {useNavigate} from 'react-router-dom';
 
 
-function Header({active}){
+function Header(props){
     const {user, logOut}=useUserAuth()
     // let navigate=useNavigate();
     const HandleLogout=async()=>{ 
         await logOut();
         // navigate("/signin");  
+    } 
+    const findCurrentPage=async()=>{
+        document.getElementById(props.active).classList.add('active');
     }
+    useEffect(() => {
+        findCurrentPage();
+    })
     return(
         <div className="header">
             <div className="logotitlecontainer"> 
@@ -23,10 +29,10 @@ function Header({active}){
             <div className="nav">
 
                 
-                <Link to="/home" className="nav-item">Home</Link>
+                <Link to="/home" className="nav-item" id="home">Home</Link>
                 {/* <Link to="/admin" className="nav-item">Admin</Link> */}
-                <Link to="/application" className="nav-item">Application</Link>
-                <Link to="/profile" className="nav-item">Profile</Link>
+                <Link to="/application" className="nav-item" id="application">Application</Link>
+                <Link to="/profile" className="nav-item profile" id="profile">Profile</Link>
                 {/* <Link to="/signin" className="nav-item">Sign In</Link>  */}
                 <Link onClick={HandleLogout} to="/" className="nav-item">Log Out</Link>
             </div>
