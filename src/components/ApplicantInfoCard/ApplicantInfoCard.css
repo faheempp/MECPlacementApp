@@ -18,6 +18,11 @@ width: 100%;
     display: inline-block;
     float: left;
 }
+.applicant-info-container-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .applicant-reject-button{
     display: inline-block;
     background-color: #ff867c;
@@ -32,4 +37,19 @@ width: 100%;
 .applicant-reject-button:hover {
     cursor: pointer;
     background-color: #ff6659;
+}
+.applicant-accept-button{
+    display: inline-block;
+    background-color: #7cff7c;
+    border: 0;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.applicant-accept-button:hover {
+    cursor: pointer;
+    background-color: #5ed85e;
 }

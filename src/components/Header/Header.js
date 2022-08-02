@@ -23,12 +23,12 @@ function Header({active}){
             <div className="nav">
 
                 
-                <Link to="/" className="nav-item">Home</Link>
-                <Link to="/admin" className="nav-item">Admin</Link>
+                <Link to="/home" className="nav-item">Home</Link>
+                {/* <Link to="/admin" className="nav-item">Admin</Link> */}
                 <Link to="/application" className="nav-item">Application</Link>
                 <Link to="/profile" className="nav-item">Profile</Link>
                 {/* <Link to="/signin" className="nav-item">Sign In</Link>  */}
-                <Link onClick={HandleLogout} to="/signin" className="nav-item">Log Out</Link>
+                <Link onClick={HandleLogout} to="/" className="nav-item">Log Out</Link>
             </div>
         </div>
     )
