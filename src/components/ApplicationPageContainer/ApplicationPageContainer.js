@@ -25,10 +25,12 @@ export default function ApplicationPageContainer() {
   const [slot, setSlot] = useState("");
   const [post, setPost] = useState("");
   const [ListItems, setList] = useState("");
+  const [SelectItems, setSelectList] = useState("");
   const [finalList, setfList] = useState("");
   const [ListItemsFinal, setListFinal] = useState("");
   const [drives, setDrives]=useState([]);
   const [accepted, setAccepted]=useState([]);
+ 
 
   const getDrives= async ()=>{
     const data= await DriveDataService.getAllDrives();
@@ -52,33 +54,50 @@ export default function ApplicationPageContainer() {
       setAppliedDrives(applied_drives);
     });
 
-
+    
     
     const ListItems= drives.map((doc,index)=>{
       //console.log(doc.companyName)
       for(let i=0;i<applied_drives.length;i++)
       {
+        var setter="EVALUATING";
         if(doc.companyName==applied_drives[i])
         {
+          const SelectItems=accepted.map((doc1,index)=>{
 
-          //console.log(doc.companyName);
-          return (
-            <AppliedDriveCard
-            company={doc.companyName}
-            post={doc.post}
-            slot={doc.slot}
-            status="evaluating"
-          />
-        )
-      }
-    }
-  })
+            if(user.uid==doc1.id)
+            { 
+              for(let j=0;j<doc1.Accepteddrives.length;j++)
+              {
+                if(applied_drives[i]==doc1.Accepteddrives[j])
+                {
+                  console.log("enter");
+                  console.log(doc1.Accepteddrives[j])
+                  setter="ACCEPTED";
+                }
+              }
+            }
+            ////////
+            ///////
+            /////////
+          })
+            return (
+              <AppliedDriveCard
+              company={doc.companyName}
+              post={doc.post}
+              slot={doc.slot}
+              status={setter}
+            />)
+          setSelectList(SelectItems)
+          //console.log(doc.companyName)
+        }
+      }})
   setList(ListItems);
-  };
+ };
   useEffect(() => {
     getDrives();
     getAllaccepted();
-    // HandleUserApplied();
+    //HandleUserApplied();
   },[]);
  
   return (
@@ -86,6 +105,7 @@ export default function ApplicationPageContainer() {
       <h2 className="application-heading">Your Applications</h2>
 
       <div>{ListItems}</div>
+      <div>{SelectItems}</div>
       <button onClick={HandleUserApplied}>View Applications</button> 
     </div>
   );
