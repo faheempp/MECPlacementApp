@@ -7,19 +7,15 @@ import { getFirestore,doc,getDoc,setDoc} from 'firebase/firestore';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBGxtfAReJN3vQI6oXZf4G5TE4gCiO8hI8",
-  authDomain: "pc-app-9f36e.firebaseapp.com",
-  projectId: "pc-app-9f36e",
-  storageBucket: "pc-app-9f36e.appspot.com",
-  messagingSenderId: "371778176262",
-  appId: "1:371778176262:web:5bd6cd650c2bae66e30a87"
+  apiKey: "AIzaSyCihlF6KNdq5DodUpDfxOrne2gtANe-hHc",
+  authDomain: "pc-app-69744.firebaseapp.com",
+  projectId: "pc-app-69744",
+  storageBucket: "pc-app-69744.appspot.com",
+  messagingSenderId: "485543724877",
+  appId: "1:485543724877:web:9980a8e040eb0dbb2d1904"
 };
 
-
-
 // Initialize Firebase
-
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 //const auth = firebase.auth();
