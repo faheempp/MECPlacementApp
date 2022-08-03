@@ -2,7 +2,7 @@ import { db } from "../firebase-config";
 import { FieldValue } from "firebase/firestore";
 import { collection, setDoc, getDocs, getDoc, addDoc, updateDoc, deleteDoc, doc,docarrayUnion } from "firebase/firestore";
 import {arrayUnion}  from "firebase/firestore";
-const CollectionRef = collection(db, "accepted");
+const CollectionRef1 = collection(db, "accepted");
 export class DataService {
     createDocument = async (userid,username) => {
 
@@ -44,7 +44,7 @@ export class DataService {
      }*/
  
     getAllaccepted=()=>{
-         return getDocs(CollectionRef)
+         return getDocs(CollectionRef1)
      }
  
      /*getUser=(id)=>{

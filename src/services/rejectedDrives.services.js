@@ -16,8 +16,7 @@ export class DataRejectService {
       },
       {
         merge:true
-      },
-    )}catch(err){
+      },)}catch(err){
         console.log(err)
     }
     }
@@ -32,9 +31,10 @@ export class DataRejectService {
          return deleteDoc(driveDoc);
      }*/
  
-    /* getAllUsers=()=>{
-         return getDocs(UserCollectionRef)
-     }*/
+    getAllReject=async(e)=>{
+        console.log("hi")
+         return getDocs(CollectionRef)
+     }
  
      /*getUser=(id)=>{
          const UserDoc=doc(db,"users",id);

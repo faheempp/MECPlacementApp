@@ -16,6 +16,7 @@ import { render } from "@testing-library/react";
 import driveServices from "../../services/drive.services";
 import DriveDataService from '../../services/drive.services.js'
 import DataService from '../../services/acceptedDrives.services'
+import DataRejectService from '../../services/rejectedDrives.services';
 
 export default function ApplicationPageContainer() {
   const { user } = useUserAuth();
@@ -30,11 +31,13 @@ export default function ApplicationPageContainer() {
   const [ListItemsFinal, setListFinal] = useState("");
   const [drives, setDrives]=useState([]);
   const [accepted, setAccepted]=useState([]);
+  const [rejected, setRejected]=useState([]);
+ 
  
 
   const getDrives= async ()=>{
     const data= await DriveDataService.getAllDrives();
-    console.log(data.docs)
+    console.log("drive"+data.docs)
     setDrives(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
 }
   const getAllaccepted= async ()=>{
@@ -42,6 +45,12 @@ export default function ApplicationPageContainer() {
   console.log("accepted" + data.docs)
   setAccepted(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
 }
+const getAllreject=async()=>{
+  const data=await DataRejectService.getAllReject();
+  console.log("rejected"+data.docs)
+  setRejected(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
+}
+
 
   const HandleUserApplied = async (e) => {
     // Retrieve user Info About Drive
@@ -77,9 +86,21 @@ export default function ApplicationPageContainer() {
                 }
               }
             }
-            ////////
-            ///////
-            /////////
+            
+          })
+          rejected.map((doc2,index)=>{
+            if(user.uid==doc2.id)
+            {
+              for(let k=0;k<doc2.Rejecteddrives.length;k++)
+              {
+                if(applied_drives[i]==doc2.Rejecteddrives[k])
+                {
+
+                  console.log("WOOOW")
+                  setter="REJECTED"
+                }
+              }
+            }
           })
             return (
               <AppliedDriveCard
@@ -96,7 +117,9 @@ export default function ApplicationPageContainer() {
  };
   useEffect(() => {
     getDrives();
+    getAllreject();
     getAllaccepted();
+    
     //HandleUserApplied();
   },[]);
  
