@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import './Header.css';
 
-import { Link } from 'react-router-dom'
-import  collegelogo from'../../images/collegelogo.png';
-import {useUserAuth} from '../../context/UserAuthContext';
-import {useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom' 
+import {useUserAuth} from '../../context/UserAuthContext'; 
 
 
 function Header(props){

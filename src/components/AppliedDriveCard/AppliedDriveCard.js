@@ -1,13 +1,7 @@
 import React from 'react'
-import './AppliedDriveCard.css';
-import {db} from '../../firebase-config';
-import { useUserAuth } from '../../context/UserAuthContext';
-import {doc,collection, getDocs,query,get,where} from 'firebase/firestore';
-import { pureFinalPropsSelectorFactory } from 'react-redux/es/connect/selectorFactory';
+import './AppliedDriveCard.css';  
 
-export default function AppliedDriveCard(props) {
-
-  const { user } = useUserAuth();
+export default function AppliedDriveCard(props) { 
   /*const HandleXYZ=async(e) => {  
     e.preventDefault();
    
