@@ -30,8 +30,9 @@ export default function Signup(){
       setError(err.message);
     }
     setError("");
-    //console.log(user.email);
+    console.log(user.email);
     try {  
+    console.log(user.uid)
     await createUserDocument(user)
     navigate('/profile');
   }catch (err) {

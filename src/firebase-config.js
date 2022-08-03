@@ -29,10 +29,11 @@ export const createUserDocument = async(user) =>
 {
   
   if (!user){
-    console.log("ERROR");
+    console.log("lala");
     return;
   }
   const ref=user.uid
+  console.log(ref)
   console.log("lalalsa")
 
 
