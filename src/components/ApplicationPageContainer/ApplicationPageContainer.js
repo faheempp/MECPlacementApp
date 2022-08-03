@@ -15,6 +15,7 @@ import { propTypes } from "react-bootstrap/esm/Image";
 import { render } from "@testing-library/react";
 import driveServices from "../../services/drive.services";
 import DriveDataService from '../../services/drive.services.js'
+import DataService from '../../services/acceptedDrives.services'
 
 export default function ApplicationPageContainer() {
   const { user } = useUserAuth();
@@ -27,12 +28,19 @@ export default function ApplicationPageContainer() {
   const [finalList, setfList] = useState("");
   const [ListItemsFinal, setListFinal] = useState("");
   const [drives, setDrives]=useState([]);
-  
+  const [accepted, setAccepted]=useState([]);
+
   const getDrives= async ()=>{
     const data= await DriveDataService.getAllDrives();
     console.log(data.docs)
     setDrives(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
 }
+  const getAllaccepted= async ()=>{
+  const data= await DataService.getAllaccepted();
+  console.log("accepted" + data.docs)
+  setAccepted(data.docs.map((doc)=>({...doc.data(),id: doc.id})))
+}
+
   const HandleUserApplied = async (e) => {
     // Retrieve user Info About Drive
     const colref = collection(db, "users");
@@ -43,41 +51,17 @@ export default function ApplicationPageContainer() {
       const applied_drives = doc.get("Applied");
       setAppliedDrives(applied_drives);
     });
-    /*const ListItems = applied_drives.map(async (applied_drive) => {
-      const coldriveref = collection(db, "drives");
-      const qdrive = query(
-        coldriveref,
-        where("companyName", "==", applied_drive)
-      );
-      const querydriveSnapshot = await getDocs(qdrive);
-      querydriveSnapshot.forEach((doc) => {
-        const post = doc.get("post");
-        setPost(post);
-        const slot = doc.get("slot");
-        setSlot(slot);
-        console.log(slot);
-        console.log(post);
-      });
 
-      return (
-        <AppliedDriveCard
-          company={applied_drive}
-          post={post}
-          slot={slot}
-          status="evaluating"
-        />
-      );
-    });
-    setList(ListItems);
-    const finalList = await Promise.all(ListItems);
-    setfList(finalList);*/
+
+    
     const ListItems= drives.map((doc,index)=>{
       //console.log(doc.companyName)
       for(let i=0;i<applied_drives.length;i++)
       {
-        if(doc.companyName===applied_drives[i])
+        if(doc.companyName==applied_drives[i])
         {
-          console.log(doc.companyName);
+
+          //console.log(doc.companyName);
           return (
             <AppliedDriveCard
             company={doc.companyName}
@@ -93,15 +77,16 @@ export default function ApplicationPageContainer() {
   };
   useEffect(() => {
     getDrives();
-    HandleUserApplied();
-  });
+    getAllaccepted();
+    // HandleUserApplied();
+  },[]);
  
   return (
     <div className="application-page-container">
       <h2 className="application-heading">Your Applications</h2>
 
       <div>{ListItems}</div>
-      {/* <button onClick={HandleUserApplied}>View Applications</button> */}
+      <button onClick={HandleUserApplied}>View Applications</button> 
     </div>
   );
 }

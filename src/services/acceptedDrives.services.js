@@ -43,9 +43,9 @@ export class DataService {
          return deleteDoc(driveDoc);
      }*/
  
-    /* getAllUsers=()=>{
-         return getDocs(UserCollectionRef)
-     }*/
+    getAllaccepted=()=>{
+         return getDocs(CollectionRef)
+     }
  
      /*getUser=(id)=>{
          const UserDoc=doc(db,"users",id);

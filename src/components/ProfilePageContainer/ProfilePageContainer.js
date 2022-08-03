@@ -13,7 +13,7 @@ export default function ProfilePageContainer(props){
 
   const [studentName,setStudentName]=useState(props.name);
   const [branch, setBranch]=useState(props.branch);
-  const [classDivision,setClassDivision]=useState("props.division");
+  const [classDivision,setClassDivision]=useState(props.Division);
   const [semester,setSemester]=useState(props.semester);
   const [cgpa,setCgpa]=useState(props.cgpa);
   const [backlogs,setBacklogs]=useState(props.backlog);
