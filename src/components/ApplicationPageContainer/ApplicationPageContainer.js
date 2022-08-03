@@ -96,7 +96,7 @@ const getAllreject=async()=>{
                 if(applied_drives[i]==doc2.Rejecteddrives[k])
                 {
 
-                  console.log("WOOOW")
+                  
                   setter="REJECTED"
                 }
               }
