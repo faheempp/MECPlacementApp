@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer';
 export default function Create() {
   return (
     <div>
-        <AdminHeader/>
+        <AdminHeader active='create'/>
         <AdminCreatePageContainer/>
         <Footer/>
     </div>

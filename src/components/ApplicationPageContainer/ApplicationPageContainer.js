@@ -129,7 +129,7 @@ const getAllreject=async()=>{
 
       <div>{ListItems}</div>
       <div>{SelectItems}</div>
-      <button onClick={HandleUserApplied}>View Applications</button> 
+      <button className="view-applications-button" onClick={HandleUserApplied}>Load Applications</button> 
     </div>
   );
 }

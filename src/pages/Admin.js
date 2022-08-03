@@ -9,7 +9,7 @@ export default function Admin() {
   return (
     <div>
       <div className='admin-page'>
-        <AdminHeader/>
+        <AdminHeader active='update'/>
         <AdminUpdatePageContainer/>
         <Footer/>
     </div>

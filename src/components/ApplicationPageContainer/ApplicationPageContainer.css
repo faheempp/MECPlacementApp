@@ -13,3 +13,22 @@
     border-bottom: 2px #00acc1 solid;
     float: none;
 } 
+.view-applications-button{
+    align-content: center;
+    width: 10rem;
+    height: 2.5rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    border: 0;
+    background-color: #5ddef4;  
+    bottom: 1rem;
+    border-radius: 5px; 
+    color: #424242;
+    font-family: 'Poppins';
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+.view-applications-button:hover{
+    cursor: pointer;
+    background-color: #54d0e0;
+}
