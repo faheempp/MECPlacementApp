@@ -61,6 +61,7 @@ return (
           <div className='img1'>
             <img src={defaultimg} alt='user'/>
             <p className='img-name'>{studentName}</p>
+            
           </div>
 
           <div className='con1'>
