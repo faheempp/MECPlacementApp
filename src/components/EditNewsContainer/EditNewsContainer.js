@@ -1,5 +1,5 @@
-import React, { useEffect,useState } from 'react'
-import AdminNewsCard from '../AdminNewsCard/AdminNewsCard'
+import React, { useEffect,useState } from 'react';
+import AdminNewsCard from '../AdminNewsCard/AdminNewsCard';
 import './EditNewsContainer.css';
 
 import NewsDataService from "../../services/news.services";

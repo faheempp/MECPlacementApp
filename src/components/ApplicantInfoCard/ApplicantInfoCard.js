@@ -16,13 +16,21 @@ export default function ApplicantInfoCard(props) {
         await DataRejectService.updateDocument(props.user_id,props.company,props.name)
         console.log("lala")
     }
+    const HandleInitialAccept=async(e)=>{
+        e.preventDefault(); 
+        if(window.confirm('Are you sure you want to accept '+props.name)){
+            HandleAccept(); 
+             document.getElementById(props.name).className='hide-buttons'; 
+            // e.document.getElementById('applicant-accept-button').classList.add('hide-buttons');
+        }
+    }
 
   return (
     <div className='applicant-info-container'>
         <div className='applicant-info-container-left'>
             <div className='applicant-info-item'>
                 <div className='applicant-info-item-name'>Applicant Name : </div>
-                <div className='applicant-info-item-data'>{props.name}</div>
+                <div className='applicant-info-item-data' id='name'>{props.name}</div>
              </div>
             <div className='applicant-info-item'>
                 <div className='applicant-info-item-name'>Branch : </div>
@@ -38,8 +46,8 @@ export default function ApplicantInfoCard(props) {
             </div>
         </div>
         <div className='applicant-info-container-right'>
-            <button className='applicant-reject-button' onClick={HandleReject}>Reject</button>
-            <button className='applicant-accept-button' onClick={HandleAccept}>Accept</button>
+            <button id={props.name} className ='applicant-reject-button' onClick={HandleReject}>Reject</button>
+            <button className={props.name} id='applicant-accept-button' onClick={HandleInitialAccept}>Accept</button>
         </div>
     </div>
   )

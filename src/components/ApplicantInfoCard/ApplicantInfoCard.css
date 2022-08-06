@@ -23,7 +23,7 @@ width: 100%;
     flex-direction: column;
     justify-content: space-around;
 }
-.applicant-reject-button{
+#applicant-reject-button{
     display: inline-block;
     background-color: #ff867c;
     border: 0;
@@ -34,11 +34,11 @@ width: 100%;
     transition-property: background-color;
     transition-duration: 300ms;
 }
-.applicant-reject-button:hover {
+#applicant-reject-button:hover {
     cursor: pointer;
     background-color: #ff6659;
 }
-.applicant-accept-button{
+#applicant-accept-button{
     display: inline-block;
     background-color: #7cff7c;
     border: 0;
@@ -49,7 +49,10 @@ width: 100%;
     transition-property: background-color;
     transition-duration: 300ms;
 }
-.applicant-accept-button:hover {
+#applicant-accept-button:hover {
     cursor: pointer;
     background-color: #5ed85e;
+}
+.hide-buttons{
+    display:none;
 }

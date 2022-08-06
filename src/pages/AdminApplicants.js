@@ -7,6 +7,7 @@ export default function AdminApplicants() {
     <div>
         <AdminHeader active='applicants'/>
         <ApplicantsPageContainer/>
+        <Footer/>
     </div>
   )
 }
