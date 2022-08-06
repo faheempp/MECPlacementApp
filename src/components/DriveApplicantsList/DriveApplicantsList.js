@@ -33,7 +33,7 @@ export default function DriveApplicantsList(props) {
                     console.log(applied_size)
                     for(let i=0;i<applied_size;i++)
                     {
-                    if(doc.Applied[i]== props.company)
+                    if(doc.Applied[i]=== props.company)
                         return <ApplicantInfoCard name={doc.Name} Branch={doc.Branch} CGPA={doc.CGPA} No_of_Backlogs={doc.Backlog} user_id={doc.id} company={props.company}/> ;
                     }
                 })}

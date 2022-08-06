@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import './Header.css';
-
 import { Link } from 'react-router-dom' 
 import {useUserAuth} from '../../context/UserAuthContext'; 
 

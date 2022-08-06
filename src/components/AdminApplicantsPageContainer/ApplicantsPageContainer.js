@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DriveApplicantsList from "../DriveApplicantsList/DriveApplicantsList";
 import "./ApplicantsPageContainer.css";
+
 import DriveDataService from "../../services/drive.services.js";
 
 export default function ApplicantsPageContainer() {
@@ -22,7 +23,7 @@ export default function ApplicantsPageContainer() {
         {drives.map((doc, index) => {
           return <DriveApplicantsList company={doc.companyName} />;
         })}
-      </div>
+      </div> 
     </div>
   );
 }
